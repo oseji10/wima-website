@@ -71,7 +71,7 @@ const TeamTwo = () => {
                 </div>
                 <div className='team__single-content'>
                   <h6>
-                    <Link href='/team-details'>Michel Fokluz</Link>
+                    <Link href='/team-details'>Hadiza Fokluz</Link>
                   </h6>
                   <p>Volunteer</p>
                 </div>

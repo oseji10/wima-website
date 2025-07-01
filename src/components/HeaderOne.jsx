@@ -101,7 +101,7 @@ const HeaderOne = () => {
                 <nav className='navbar p-0'>
                   <div className='navbar-logo'>
                     <Link href='/'>
-                      <img src='/assets/images/logo.png' alt='Image_inner' />
+                      <img src='/assets/images/images/wima-logo.svg' alt='Image_inner' />
                     </Link>
                   </div>
                   <div className='navbar__menu-wrapper'>
@@ -528,10 +528,10 @@ const HeaderOne = () => {
                         </button>
                       </div>
                       <Link
-                        href='/donate-us'
+                        href='/book-a-service'
                         className='btn--primary d-none d-md-flex'
                       >
-                        Donate Now <i className='fa-solid fa-arrow-right' />
+                        Book a Service <i className='fa-solid fa-arrow-right' />
                       </Link>
                     </div>
                     <button

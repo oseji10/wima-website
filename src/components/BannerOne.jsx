@@ -27,25 +27,24 @@ const BannerOne = () => {
                   className='banner-two__slider-bg'
                   style={{
                     backgroundImage:
-                      "url(/assets/images/banner/banner-two-bg.png)",
+                      "url(/assets/images/banner/banner3.png)",
                   }}
                 ></div>
                 <div className='container'>
                   <div className='row'>
                     <div className='col-12 col-md-9 col-lg-7 col-xxl-6'>
                       <div className='banner-two__slider-content'>
-                        <span className='sub-title'>
+                        {/* <span className='sub-title'>
                           <i className='icon-donation' />
-                          Start donating poor people
-                        </span>
-                        <h1>
-                          Giving help <br />
-                          To Those <span className='bottom-line'>peoples</span>
-                          Who Need It.
-                        </h1>
+                          At WIMA,
+                        </span> */}
+                        <h2 style={{ color: "#fff", fontWeight: "bold" }}>
+                          WIMA is uplifting <br />
+                          women one ommunity at a time.
+                        </h2>
                         <div className='banner__content-cta cta'>
                           <Link
-                            href='/our-causes'
+                            href='/about-wima'
                             aria-label='about us'
                             title='about us'
                             className='btn--tertiary'
@@ -59,7 +58,7 @@ const BannerOne = () => {
                             title='contact us'
                             className='btn--primary'
                           >
-                            Get A Quote{" "}
+                            Book A Service{" "}
                             <i className='fa-solid fa-arrow-right' />
                           </Link>
                         </div>
@@ -249,7 +248,7 @@ const BannerOne = () => {
             alt='Image_inner'
           />
         </div>
-        <div className='sprade-shape'>
+        {/* <div className='sprade-shape'>
           <img
             src='assets/images/sprade-base.png'
             alt='Image_inner'
@@ -257,7 +256,7 @@ const BannerOne = () => {
             data-aos='zoom-in'
             data-aos-duration={1000}
           />
-        </div>
+        </div> */}
         <div className='unity'>
           <img src='/assets/images/unity.png' alt='Image_inner' />
         </div>

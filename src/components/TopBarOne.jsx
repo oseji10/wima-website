@@ -26,15 +26,15 @@ const TopBarOne = () => {
                   <div className="topbar__list-wrapper">
                     <ul className="topbar__list">
                       <li>
-                        <a href="mailto:support@example.com">
+                        <a href="mailto:info@wimanigeria.com">
                           <i className="fa-regular fa-envelope"></i>
-                          support@example.com
+                          info@wimanigeria.com
                         </a>
                       </li>
                       <li>
-                        <a href="tel:2305-587-3407">
+                        <a href="tel:+2348064237096">
                           <i className="fa-solid fa-phone"></i>
-                          +2(305) 587-3407
+                          +234-806-4237-096
                         </a>
                       </li>
                     </ul>
@@ -50,7 +50,7 @@ const TopBarOne = () => {
                 </div>
                 <div className="col-12 col-lg-6 col-xxl-4">
                   <div className="topbar__items justify-content-end">
-                    <div className="select-currency ">
+                    {/* <div className="select-currency ">
                       <select
                         ref={currencyRef_one}
                         name="currency"
@@ -62,8 +62,8 @@ const TopBarOne = () => {
                         <option value="aud">AUD</option>
                         <option value="euro">Euro</option>
                       </select>
-                    </div>
-                    <div className="select-country ">
+                    </div> */}
+                    {/* <div className="select-country ">
                       <select
                         ref={countryRef_one}
                         name="country"
@@ -83,10 +83,10 @@ const TopBarOne = () => {
                           Italian
                         </option>
                       </select>
-                    </div>
+                    </div> */}
                     <div className="social">
                       <a
-                        href="https://www.facebook.com/"
+                        href="https://web.facebook.com/womeninmechanizedagriculture?_rdc=1&_rdr"
                         target="_blank"
                         rel="noreferrer"
                         title="facebook"
@@ -94,23 +94,23 @@ const TopBarOne = () => {
                         <i className="fa-brands fa-facebook-f"></i>
                       </a>
                       <a
-                        href="https://vimeo.com/"
+                        href="https://www.instagram.com/wima.nigeria/"
                         target="_blank"
                         rel="noreferrer"
-                        title="vimeo"
+                        title="instagram"
                       >
-                        <i className="fa-brands fa-vimeo-v"></i>
+                        <i className="fa-brands fa-instagram"></i>
                       </a>
-                      <a
-                        href="https://x.com/"
+                      {/* <a
+                        href="#"
                         target="_blank"
                         rel="noreferrer"
                         title="twitter"
                       >
                         <i className="fa-brands fa-twitter"></i>
-                      </a>
+                      </a> */}
                       <a
-                        href="https://www.linkedin.com/"
+                        href="https://www.linkedin.com/company/106617937/admin/page-posts/published/"
                         target="_blank"
                         rel="noreferrer"
                         title="linkedin"

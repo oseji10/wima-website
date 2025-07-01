@@ -38,7 +38,7 @@ const TeamThree = () => {
                 <div className='team__content-wrapper'>
                   <div className='team__single-content'>
                     <h5>
-                      <Link href='/team-details'>Michel Fokluz</Link>
+                      <Link href='/team-details'>Hadiza Fokluz</Link>
                     </h5>
                     <p>Software Engineer</p>
                   </div>

@@ -11,13 +11,13 @@ const TeamInner = () => {
               data-aos='fade-up'
               data-aos-duration={1000}
             >
-              <span className='sub-title'>
+              {/* <span className='sub-title'>
                 <i className='icon-donation' />
                 Start donating poor people
-              </span>
+              </span> */}
               <h2 className='title-animation_inner'>
-                Meet Our Volunteer
-                <span>Team</span> members
+                Meet The Team
+                {/* <span>Team</span> members */}
               </h2>
             </div>
           </div>
@@ -32,7 +32,7 @@ const TeamInner = () => {
               <div className='team__single van-tilt'>
                 <div className='team__single-thumb'>
                   <Link href='/team-details'>
-                    <img src='assets/images/team/one.png' alt='Image_inner' />
+                    <img src='assets/images/team/hadiza.png' alt='Image_inner' />
                   </Link>
                   <div className='team__icons'>
                     <div className='team__single-content__icon'>
@@ -66,9 +66,9 @@ const TeamInner = () => {
                 </div>
                 <div className='team__single-content'>
                   <h6>
-                    <Link href='/team-details'>Michel Fokluz</Link>
+                    <Link href='/team-details'>Hadiza Abubakar Umar</Link>
                   </h6>
-                  <p>Volunteer</p>
+                  <p>Poject Lead</p>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ const TeamInner = () => {
               <div className='team__single van-tilt'>
                 <div className='team__single-thumb'>
                   <Link href='/team-details'>
-                    <img src='assets/images/team/two.png' alt='Image_inner' />
+                    <img src='assets/images/team/zainab.jpg' alt='Image_inner' />
                   </Link>
                   <div className='team__icons'>
                     <div className='team__single-content__icon'>
@@ -117,9 +117,9 @@ const TeamInner = () => {
                 </div>
                 <div className='team__single-content'>
                   <h6>
-                    <Link href='/team-details'>Arian Drobloas</Link>
+                    <Link href='/team-details'>Zainab Aminu</Link>
                   </h6>
-                  <p>Volunteer</p>
+                  <p>Project Manager - Gender Democracy</p>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@ const TeamInner = () => {
               <div className='team__single van-tilt'>
                 <div className='team__single-thumb'>
                   <Link href='/team-details'>
-                    <img src='assets/images/team/three.png' alt='Image_inner' />
+                    <img src='assets/images/team/gbenga.jpg' alt='Image_inner' />
                   </Link>
                   <div className='team__icons'>
                     <div className='team__single-content__icon'>
@@ -168,9 +168,9 @@ const TeamInner = () => {
                 </div>
                 <div className='team__single-content'>
                   <h6>
-                    <Link href='/team-details'>Jara Klintof</Link>
+                    <Link href='/team-details'>Oloruntoba Oluwagbenga</Link>
                   </h6>
-                  <p>Volunteer</p>
+                  <p>Project Manager (M&E)</p>
                 </div>
               </div>
             </div>
@@ -185,7 +185,7 @@ const TeamInner = () => {
               <div className='team__single van-tilt'>
                 <div className='team__single-thumb'>
                   <Link href='/team-details'>
-                    <img src='assets/images/team/four.png' alt='Image_inner' />
+                    <img src='assets/images/team/jessica.png' alt='Image_inner' />
                   </Link>
                   <div className='team__icons'>
                     <div className='team__single-content__icon'>
@@ -219,9 +219,9 @@ const TeamInner = () => {
                 </div>
                 <div className='team__single-content'>
                   <h6>
-                    <Link href='/team-details'>Aiden Markram</Link>
+                    <Link href='/team-details'>Jessica Gomina</Link>
                   </h6>
-                  <p>Volunteer</p>
+                  <p>Finance Officer</p>
                 </div>
               </div>
             </div>
@@ -235,7 +235,7 @@ const TeamInner = () => {
               <div className='team__single van-tilt'>
                 <div className='team__single-thumb'>
                   <Link href='/team-details'>
-                    <img src='assets/images/team/eight.png' alt='Image_inner' />
+                    <img src='assets/images/team/rufai.jpg' alt='Image_inner' />
                   </Link>
                   <div className='team__icons'>
                     <div className='team__single-content__icon'>
@@ -269,9 +269,9 @@ const TeamInner = () => {
                 </div>
                 <div className='team__single-content'>
                   <h6>
-                    <Link href='/team-details'>Michel Fokluz</Link>
+                    <Link href='/team-details'>Rufai Gummi</Link>
                   </h6>
-                  <p>Volunteer</p>
+                  <p>Field/Operations Manager</p>
                 </div>
               </div>
             </div>
@@ -286,7 +286,7 @@ const TeamInner = () => {
               <div className='team__single van-tilt'>
                 <div className='team__single-thumb'>
                   <Link href='/team-details'>
-                    <img src='assets/images/team/nine.png' alt='Image_inner' />
+                    <img src='assets/images/team/sekinat.jpg' alt='Image_inner' />
                   </Link>
                   <div className='team__icons'>
                     <div className='team__single-content__icon'>
@@ -320,9 +320,9 @@ const TeamInner = () => {
                 </div>
                 <div className='team__single-content'>
                   <h6>
-                    <Link href='/team-details'>Arian Drobloas</Link>
+                    <Link href='/team-details'>Sekinat Ogungboye</Link>
                   </h6>
-                  <p>Volunteer</p>
+                  <p>Resultd Office</p>
                 </div>
               </div>
             </div>
@@ -433,42 +433,11 @@ const TeamInner = () => {
             </div>
           </div>
         </div>
-        <div className='row'>
-          <div className='col-12'>
-            <div
-              className='pagination-wrapper'
-              data-aos='fade-up'
-              data-aos-duration={1000}
-            >
-              <ul className='pagination main-pagination'>
-                <li>
-                  <button>
-                    <i className='fa-solid fa-angles-left' />
-                  </button>
-                </li>
-                <li>
-                  <Link href='/blog-list'>1</Link>
-                </li>
-                <li>
-                  <Link href='/blog-list' className='active'>
-                    2
-                  </Link>
-                </li>
-                <li>
-                  <Link href='/blog-list'>3</Link>
-                </li>
-                <li>
-                  <button>
-                    <i className='fa-solid fa-angles-right' />
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        
+        {/* </div> */}
       </div>
       <div className='spade'>
-        <img src='assets/images/sprade-green.png' alt='Image_inner' />
+        <img src='assets/images/sprade-base.png' alt='Image_inner' />
       </div>
     </section>
   );

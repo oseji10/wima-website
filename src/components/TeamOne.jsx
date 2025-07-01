@@ -33,7 +33,7 @@ const TeamOne = () => {
                 <div className='team__single van-tilt'>
                   <div className='team__single-thumb'>
                     <Link href='/team-details'>
-                      <img src='assets/images/team/one.png' alt='Image_inner' />
+                      <img src='assets/images/team/hadiza.png' alt='Image_inner' />
                     </Link>
                     <div className='team__icons'>
                       <div className='team__single-content__icon'>
@@ -67,9 +67,9 @@ const TeamOne = () => {
                   </div>
                   <div className='team__single-content'>
                     <h6>
-                      <Link href='/team-details'>Michel Fokluz</Link>
+                      <Link href='/team-details'>Hadiza Abubakar Umar</Link>
                     </h6>
-                    <p>Volunteer</p>
+                    <p>Zainab Aminu</p>
                   </div>
                 </div>
               </div>

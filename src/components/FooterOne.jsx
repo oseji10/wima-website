@@ -249,7 +249,7 @@ const FooterOne = () => {
                 <div className='footer-two__copyright-inner text-center text-lg-start'>
                   <p>
                     Copyright © <span id='copyrightYear' />{" "}
-                    <Link href='/'>Charifund</Link>. All rights reserved.
+                    <Link href='/'>WIMA - Women in Mechanized Agriculture</Link>. All rights reserved. Powered by Resilience Nigeria
                   </p>
                 </div>
               </div>
