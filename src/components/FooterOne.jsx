@@ -11,7 +11,7 @@ const FooterOne = () => {
                 <h3 className='title-animation_inner'>
                   Subscribe to Our Newsletter
                 </h3>
-                <p>Regular inspections and feedback mechanisms</p>
+                <p>Want regular news about what's happening? Subscribe to our newsletter</p>
               </div>
             </div>
             <div className='col-12 col-lg-5 col-xxl-5 offset-xxl-1'>
@@ -51,7 +51,7 @@ const FooterOne = () => {
               >
                 <div className='footer-two__widget-logo'>
                   <Link href='/'>
-                    <img src='assets/images/logo-light.png' alt='Image_inner' />
+                    <img src='assets/images/wima-base.png' alt='Image_inner' />
                   </Link>
                 </div>
                 <div className='footer-two__widget-content'>
@@ -61,7 +61,7 @@ const FooterOne = () => {
                   </p>
                   <div className='social'>
                     <Link
-                      href='https://www.facebook.com'
+                      href='https://web.facebook.com/womeninmechanizedagriculture?_rdc=1&_rdr'
                       target='_blank'
                       aria-label='share us on facebook'
                       title='facebook'
@@ -69,23 +69,23 @@ const FooterOne = () => {
                       <i className='fa-brands fa-facebook-f' />
                     </Link>
                     <Link
-                      href='https://vimeo.com'
+                      href='https://www.instagram.com/wima.nigeria/'
                       target='_blank'
-                      aria-label='share us on vimeo'
-                      title='vimeo'
+                      aria-label='share us on instagram'
+                      title='instagram'
                     >
-                      <i className='fa-brands fa-vimeo-v' />
+                      <i className='fa-brands fa-instagram' />
                     </Link>
-                    <Link
+                    {/* <Link
                       href='https://x.com'
                       target='_blank'
                       aria-label='share us on twitter'
                       title='twitter'
                     >
                       <i className='fa-brands fa-twitter' />
-                    </Link>
+                    </Link> */}
                     <Link
-                      href='https://www.linkedin.com'
+                      href='https://www.linkedin.com/company/106617937/admin/page-posts/published/'
                       target='_blank'
                       aria-label='share us on linkedin'
                       title='linkedin'
@@ -120,15 +120,15 @@ const FooterOne = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='/blog-list'>
+                      <Link href='#'>
                         <i className='fa-solid fa-arrow-right' />
-                        Our News
+                        The Team
                       </Link>
                     </li>
                     <li>
-                      <Link href='/our-causes'>
+                      <Link href='#'>
                         <i className='fa-solid fa-arrow-right' />
-                        Our Campaign
+                        Projects
                       </Link>
                     </li>
                     <li>
@@ -138,9 +138,9 @@ const FooterOne = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='/contact-us'>
+                      <Link href='#'>
                         <i className='fa-solid fa-arrow-right' />
-                        Get A Quote
+                        Book A Service
                       </Link>
                     </li>
                   </ul>
@@ -165,33 +165,33 @@ const FooterOne = () => {
                 <div className='footer-two__widget-content'>
                   <ul>
                     <li>
-                      <Link href='/our-causes'>
+                      <Link href='#'>
                         <i className='fa-solid fa-arrow-right' />
-                        Our Causes
+                        Threshing
                       </Link>
                     </li>
                     <li>
                       <Link href='/events'>
                         <i className='fa-solid fa-arrow-right' />
-                        Education Support
+                        Pumping
                       </Link>
                     </li>
                     <li>
-                      <Link href='/our-causes'>
+                      <Link href='#'>
                         <i className='fa-solid fa-arrow-right' />
-                        Our Campaign
+                        Spraying
                       </Link>
                     </li>
                     <li>
-                      <Link href='/our-causes'>
+                      <Link href='#'>
                         <i className='fa-solid fa-arrow-right' />
-                        Food Support
+                        Drying
                       </Link>
                     </li>
                     <li>
-                      <Link href='/our-causes'>
+                      <Link href='#'>
                         <i className='fa-solid fa-arrow-right' />
-                        Health Support
+                        More...
                       </Link>
                     </li>
                   </ul>
@@ -221,19 +221,19 @@ const FooterOne = () => {
                         target='_blank'
                       >
                         <i className='fa-solid fa-location-dot' />
-                        455 West Orchard Street Kings Mountain, NC 280867
+                        House 2, Block B, Sani Zangon Daura Estate, Kado, Abuja, Nigeria
                       </Link>
                     </li>
                     <li>
                       <Link href='/tel:2305-587-3407'>
                         <i className='fa-solid fa-phone' />
-                        +088 (246) 642-27-10
+                        +234-806-4237-096
                       </Link>
                     </li>
                     <li>
-                      <Link href='/mailto:support@example.com'>
+                      <Link  className="footer-two__widget-content--contact2" href='/mailto:info@wimanigeria.com'>
                         <i className='fa-regular fa-envelope' />
-                        example@email.com
+                        info@wimanigeria.com
                       </Link>
                     </li>
                   </ul>
@@ -273,7 +273,7 @@ const FooterOne = () => {
             </div>
           </div>
         </div>
-        <div className='sprade' data-aos='zoom-in' data-aos-duration={1000}>
+        {/* <div className='sprade' data-aos='zoom-in' data-aos-duration={1000}>
           <img
             src='assets/images/sprade.png'
             alt='Image_inner'
@@ -286,7 +286,7 @@ const FooterOne = () => {
           data-aos-duration={1000}
         >
           <img src='assets/images/sprade-light.png' alt='Image_inner' />
-        </div>
+        </div> */}
       </footer>
     </>
   );

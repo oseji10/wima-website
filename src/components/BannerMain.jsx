@@ -14,7 +14,7 @@ const BannerMain = () => {
     autoplay: true,
     autoplaySpeed: 6000,
     pauseOnHover: true,
-    arrows: false,
+    arrows: true,
   };
   return (
     <section className='banner-three'>
@@ -64,19 +64,13 @@ const BannerMain = () => {
                 </div>
                 <div className='swiper-slide'>
                   <div className='banner-three__content'>
-                    <span className='sub-title'>
-                      <i className='icon-donation' />
-                      Start donating poor people
-                    </span>
-                    <h1 className='title-animation_inner'>
-                      We Are non <br />
-                      profit charity <span className='bottom-line'>World</span>
-                      Organization
-                    </h1>
+                     <h1 className='title-animation_inner'>WIMA is 
+                    <span className='bottom-line'>transforming&nbsp;</span>
+                           agriculture in Africa
+                           </h1>
                     <p>
-                      Denouncing pleasure and praising pain was born and will
-                      give you saidul complete great explorer of the truth the
-                      master-builder.
+                      We're revolutionizing Nigerian agriculture with innovative mechanization, 
+                      empowering women farmers, and fostering sustainable growth through community-driven solutions.
                     </p>
                     <div className='banner__content-cta cta'>
                       <Link
@@ -85,7 +79,7 @@ const BannerMain = () => {
                         title='about us'
                         className='btn--tertiary'
                       >
-                        Discover More <i className='fa-solid fa-arrow-right' />
+                        Find Out How <i className='fa-solid fa-arrow-right' />
                       </Link>
                       <Link
                         href='/contact-us'
@@ -93,7 +87,7 @@ const BannerMain = () => {
                         title='contact us'
                         className='btn--primary'
                       >
-                        Get A Quote <i className='fa-solid fa-arrow-right' />
+                        Book A Service<i className='fa-solid fa-arrow-right' />
                       </Link>
                     </div>
                   </div>
@@ -109,14 +103,17 @@ const BannerMain = () => {
                       profit charity <span className='bottom-line'>World</span>
                       Organization
                     </h1> */}
-                    <h1>WIMA is uplifting <br />
-                    <span className='bottom-line'>women</span>
-                           one community at a time...
+                    {/* <h1>We're <br />
+                    <span className='bottom-line'>amplifying</span>
+                           women voices in agriculture
+                           </h1> */}
+                           <h1 className='title-animation_inner'>We're
+                    <span className='bottom-line'>amplifying&nbsp;</span>
+                           women voices in agriculture
                            </h1>
                     <p>
-                      Denouncing pleasure and praising pain was born and will
-                      give you saidul complete great explorer of the truth the
-                      master-builder.
+                      At WIMA, we're empowering women in agriculture by amplifying their voices, 
+                      promoting mechanization, and driving inclusive, sustainable change.
                     </p>
                     <div className='banner__content-cta cta'>
                       <Link

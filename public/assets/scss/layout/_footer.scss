@@ -462,14 +462,27 @@
       }
       a {
         gap: 16px;
-        text-transform: lowercase;
         align-items: flex-start;
+        // text-transform: lowercase;
         i {
           color: var(--base-color);
           transform: rotate(0deg);
           font-size: 18px;
           margin-top: 6px;
         }
+      }
+    }
+
+    .footer-two__widget-content--contact2 {
+      li {
+        margin-bottom: 16px;
+        &:nth-last-of-type(1) {
+          margin-bottom: 0px;
+        }
+      }
+      a {
+        text-transform: lowercase !important;
+        
       }
     }
   }

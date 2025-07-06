@@ -78,7 +78,7 @@ Why Choose WIMA?                </h2>
                           }}
                         >
                           <div className='difference__single-thumb'>
-                            <i className='icon-education' />
+                            <i className='icon-women' />
                           </div>
                           <div className='difference__single-content'>
                             <h5>
@@ -103,15 +103,15 @@ Why Choose WIMA?                </h2>
                           }}
                         >
                           <div className='difference__single-thumb'>
-                            <i className='icon-food' />
+                            <i className='icon-farm' />
                           </div>
                           <div className='difference__single-content'>
                             <h5>
-                              <Link href='/cause-details'>Partner With Us</Link>
+                              <Link href='/cause-details'>Sustainable & Efficient Farming</Link>
                             </h5>
                             <p>
-                              Set up a secure and user-friendly online donation
-                              platform that accepts multiple
+                              WIMA promotes environmentally friendly mechanization that reduces manual labour, increases farm yields,
+                              and ensures long-term sustainability. By utilizing modern technology, we help farmers maximize productivity with minimal effort.
                             </p>
                           </div>
                         </div>
@@ -199,15 +199,15 @@ Why Choose WIMA?                </h2>
                           }}
                         >
                           <div className='difference__single-thumb'>
-                            <i className='icon-health' />
+                            <i className='icon-road' />
                           </div>
                           <div className='difference__single-content'>
                             <h5>
-                              <Link href='/cause-details'>Request A Service</Link>
+                              <Link href='/cause-details'>Bridging the Mechanization Gap</Link>
                             </h5>
                             <p>
-                              Set up a secure and user-friendly online donation
-                              platform that accepts multiple
+                              Access to tractors and mechanized tools has been a barrier for many rural farmers especially women.
+                              WIMA provides affordable equipment rentals, taining and support services to empower smallholder farmers.
                             </p>
                           </div>
                         </div>

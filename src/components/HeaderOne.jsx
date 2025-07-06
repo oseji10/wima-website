@@ -107,7 +107,7 @@ const HeaderOne = () => {
                   <div className='navbar__menu-wrapper'>
                     <div className='navbar__menu d-none d-xl-block'>
                       <ul className='navbar__list'>
-                        <li
+                        {/* <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
                             pathname === "/" ? "active" : ""
                           }`}
@@ -205,15 +205,115 @@ const HeaderOne = () => {
                               <Link href='/index-five'>Home Five</Link>
                             </li>
                           </ul>
+                        </li> */}
+
+                         <li
+                          className={`navbar__item navbar__item--has-children nav-fade ${
+                            pathname === "/" ? "active" : ""
+                          }`}
+                        >
+
                         </li>
-                        <li
+                        {/* <Link
+                            href='#'
+                            aria-label='dropdown menu'
+                            className='navbar__dropdown-label dropdown-label-alter'
+                          >
+                            Home
+                          </Link> */}
+                          <li
+                          className={`navbar__item nav-fade ${
+                            ["/"].includes(pathname) ? "active" : ""
+                          }`}
+                        >
+                          <Link href='/'>Home</Link>
+                        </li>
+
+                         <li
+                          className={`navbar__item navbar__item--has-children nav-fade ${
+                            [
+                              "/blog-list",
+                              "/blog-grid",
+                              "/blog-details",
+                            ].includes(pathname)
+                              ? "active"
+                              : ""
+                          } `}
+                        >
+                          <Link
+                            href='/'
+                            aria-label='dropdown menu'
+                            className='navbar__dropdown-label dropdown-label-alter'
+                          >
+                            About
+                          </Link>
+                          <ul className='navbar__sub-menu'>
+                            <li
+                              className={
+                                ["#"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='#'>About Us</Link>
+                            </li>
+                            <li
+                              className={
+                                ["/team"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='/team'>The Team</Link>
+                            </li>
+                            <li
+                              className={
+                                ["/faqs"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='/faqs'>FAQs</Link>
+                            </li>
+
+                            <li
+                              className={
+                                ["#"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='#'>What We Do</Link>
+                            </li>
+
+                          </ul>
+                        </li>
+                        
+                        {/* <li
                           className={`navbar__item nav-fade ${
                             ["/about-us"].includes(pathname) ? "active" : ""
                           }`}
                         >
                           <Link href='/about-us'>About Us</Link>
-                        </li>
+                        </li> */}
+
                         <li
+                          className={`navbar__item nav-fade ${
+                            ["/services"].includes(pathname) ? "active" : ""
+                          }`}
+                        >
+                          <Link href='/services'>Services</Link>
+                        </li>
+
+                        <li
+                          className={`navbar__item nav-fade ${
+                            ["/projects"].includes(pathname) ? "active" : ""
+                          }`}
+                        >
+                          <Link href='/projects'>Projects</Link>
+                        </li>
+
+                        {/* <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
                             ["/our-causes", "/cause-details"].includes(pathname)
                               ? "active"
@@ -225,7 +325,7 @@ const HeaderOne = () => {
                             aria-label='dropdown menu'
                             className='navbar__dropdown-label dropdown-label-alter'
                           >
-                            Causes
+                            Media
                           </Link>
                           <ul className='navbar__sub-menu'>
                             <li
@@ -247,19 +347,22 @@ const HeaderOne = () => {
                               <Link href='/cause-details'>Cause Details</Link>
                             </li>
                           </ul>
-                        </li>
+                        </li> */}
                         <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
                             [
-                              "/faq",
-                              "/donate-us",
-                              "/become-volunteer",
-                              "/events",
-                              "/event-details",
-                              "/shop",
-                              "/product-details",
-                              "/cart",
-                              "/checkout",
+                              // "/faq",
+                              // "/donate-us",
+                              // "/become-volunteer",
+                              // "/events",
+                              // "/event-details",
+                              // "/shop",
+                              // "/product-details",
+                              // "/cart",
+                              // "/checkout",
+                              "/gallery",
+                              "video",
+
                             ].includes(pathname)
                               ? "active"
                               : ""
@@ -270,7 +373,7 @@ const HeaderOne = () => {
                             aria-label='dropdown menu'
                             className='navbar__dropdown-label dropdown-label-alter'
                           >
-                            Pages
+                            Media
                           </Link>
                           <ul className='navbar__sub-menu'>
                             <li
@@ -278,7 +381,7 @@ const HeaderOne = () => {
                                 ["/faq"].includes(pathname) ? "active" : ""
                               }
                             >
-                              <Link href='/faq'>FAQ</Link>
+                              <Link href='/faq'>Photo Gallery</Link>
                             </li>
                             <li
                               className={
@@ -287,9 +390,9 @@ const HeaderOne = () => {
                                   : ""
                               }
                             >
-                              <Link href='/donate-us'>Donate Us</Link>
+                              <Link href='/donate-us'>Videos</Link>
                             </li>
-                            <li
+                            {/* <li
                               className={
                                 ["/become-volunteer"].includes(pathname)
                                   ? "active"
@@ -299,8 +402,8 @@ const HeaderOne = () => {
                               <Link href='/become-volunteer'>
                                 Become Volunteer
                               </Link>
-                            </li>
-                            <li
+                            </li> */}
+                            {/* <li
                               className={`navbar__item navbar__item--has-children ${
                                 ["/events", "/event-details"].includes(pathname)
                                   ? "active"
@@ -336,8 +439,8 @@ const HeaderOne = () => {
                                   </Link>
                                 </li>
                               </ul>
-                            </li>
-                            <li
+                            </li> */}
+                            {/* <li
                               className={`navbar__item navbar__item--has-children ${
                                 [
                                   "/shop",
@@ -392,8 +495,8 @@ const HeaderOne = () => {
                                   <Link href='/checkout'>Cehckout</Link>
                                 </li>
                               </ul>
-                            </li>
-                            <li
+                            </li> */}
+                            {/* <li
                               className={`navbar__item navbar__item--has-children ${
                                 ["/our-team", "/team-details"].includes(
                                   pathname
@@ -429,8 +532,8 @@ const HeaderOne = () => {
                                   <Link href='/team-details'>Team Details</Link>
                                 </li>
                               </ul>
-                            </li>
-                            <li
+                            </li> */}
+                            {/* <li
                               className={
                                 ["/coming-soon"].includes(pathname)
                                   ? "active"
@@ -445,57 +548,10 @@ const HeaderOne = () => {
                               }
                             >
                               <Link href='/404'>Error</Link>
-                            </li>
+                            </li> */}
                           </ul>
                         </li>
-                        <li
-                          className={`navbar__item navbar__item--has-children nav-fade ${
-                            [
-                              "/blog-list",
-                              "/blog-grid",
-                              "/blog-details",
-                            ].includes(pathname)
-                              ? "active"
-                              : ""
-                          } `}
-                        >
-                          <Link
-                            href='/'
-                            aria-label='dropdown menu'
-                            className='navbar__dropdown-label dropdown-label-alter'
-                          >
-                            News
-                          </Link>
-                          <ul className='navbar__sub-menu'>
-                            <li
-                              className={
-                                ["/blog-list"].includes(pathname)
-                                  ? "active"
-                                  : ""
-                              }
-                            >
-                              <Link href='/blog-list'>News List View</Link>
-                            </li>
-                            <li
-                              className={
-                                ["/blog-grid"].includes(pathname)
-                                  ? "active"
-                                  : ""
-                              }
-                            >
-                              <Link href='/blog-grid'>News Grid View</Link>
-                            </li>
-                            <li
-                              className={
-                                ["/blog-details"].includes(pathname)
-                                  ? "active"
-                                  : ""
-                              }
-                            >
-                              <Link href='/blog-details'>News Details</Link>
-                            </li>
-                          </ul>
-                        </li>
+                       
                         <li
                           className={`navbar__item nav-fade ${
                             ["/contact-us"].includes(pathname) ? "active" : ""
@@ -505,7 +561,7 @@ const HeaderOne = () => {
                         </li>
                       </ul>
                     </div>
-                    <div className='contact-btn'>
+                    {/* <div className='contact-btn'>
                       <div className='contact-icon'>
                         <i className='icon-support' />
                       </div>
@@ -513,7 +569,7 @@ const HeaderOne = () => {
                         <p>Call Us Now</p>
                         <a href='tel:01-793-7938'>(+01)-793-7938 </a>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   <div className='navbar__options'>
                     <div className='navbar__mobile-options '>

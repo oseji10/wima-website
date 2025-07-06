@@ -62,7 +62,7 @@ const page = () => {
         {/* <HelpOne /> */}
 
         {/* CauseOne */}
-        <CauseOne />
+        {/* <CauseOne /> */}
 
         {/* CtaSectionOne */}
         {/* <CtaSectionOne /> */}
@@ -71,19 +71,19 @@ const page = () => {
         {/* <TeamOne /> */}
 
         {/* CommunityOne */}
-        <CommunityOne />
+        {/* <CommunityOne /> */}
 
         {/* TestimonialOne */}
-        <TestimonialOne />
+        {/* <TestimonialOne /> */}
 
         {/* CauseSliderTwo */}
         {/* <CauseSliderTwo /> */}
 
         {/* DifferenceTwo */}
-        <DifferenceTwo />
+        {/* <DifferenceTwo /> */}
 
         {/* BlogOne */}
-        <BlogOne />
+        {/* <BlogOne /> */}
 
         {/* FooterOne */}
         <FooterOne />
