@@ -12,7 +12,7 @@ const BannerOne = () => {
     slidesToScroll: 1,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 4000,
     pauseOnHover: true,
     arrows: false,
   };
@@ -32,7 +32,56 @@ const BannerOne = () => {
                 ></div>
                 <div className='container'>
                   <div className='row'>
-                    <div className='col-12 col-md-9 col-lg-7 col-xxl-6'>
+                    <div className=''>
+                      <div className='banner-two__slider-content'>
+                        {/* <span className='sub-title'>
+                          <i className='icon-donation' />
+                          Start donating poor people
+                        </span> */}
+                        <h2 style={{ color: "#fff", fontWeight: "bold" }}>
+                          At WIMA, <br />
+                         we're amplifying women voices <br/>
+                         in agriculture
+                        </h2>
+                        <div className='banner__content-cta cta'>
+                          <Link
+                            href='/our-causes'
+                            aria-label='about us'
+                            title='about us'
+                            className='btn--tertiary'
+                          >
+                            Discover More{" "}
+                            <i className='fa-solid fa-arrow-right' />
+                          </Link>
+                          <Link
+                            href='/contact-us'
+                            aria-label='contact us'
+                            title='contact us'
+                            className='btn--primary'
+                          >
+                            Book a Service{" "}
+                            <i className='fa-solid fa-arrow-right' />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className='swiper-slide'>
+              <div className='banner-two__slider-single'>
+                <div
+                  className='banner-two__slider-bg'
+                  style={{
+                    backgroundImage:
+                      "url(/assets/images/banner/banner111.png)",
+                  }}
+                ></div>
+                <div className='container'>
+                  <div className='row'>
+                    <div className=''>
                       <div className='banner-two__slider-content'>
                         {/* <span className='sub-title'>
                           <i className='icon-donation' />
@@ -40,7 +89,7 @@ const BannerOne = () => {
                         </span> */}
                         <h2 style={{ color: "#fff", fontWeight: "bold" }}>
                           WIMA is uplifting <br />
-                          women one ommunity at a time.
+                          women one community at a time...
                         </h2>
                         <div className='banner__content-cta cta'>
                           <Link
@@ -49,7 +98,7 @@ const BannerOne = () => {
                             title='about us'
                             className='btn--tertiary'
                           >
-                            Discover More{" "}
+                            Discover How{" "}
                             <i className='fa-solid fa-arrow-right' />
                           </Link>
                           <Link
@@ -74,22 +123,21 @@ const BannerOne = () => {
                   className='banner-two__slider-bg'
                   style={{
                     backgroundImage:
-                      "url(/assets/images/banner/banner-one-bg.png)",
+                      "url(/assets/images/banner/banner2.png)",
                   }}
                 ></div>
                 <div className='container'>
                   <div className='row'>
-                    <div className='col-12 col-md-9  col-lg-7 col-xxl-6'>
+                    <div className=''>
                       <div className='banner-two__slider-content'>
-                        <span className='sub-title'>
+                        {/* <span className='sub-title'>
                           <i className='icon-donation' />
                           Start donating poor people
-                        </span>
-                        <h1>
-                          Giving help <br />
-                          To Those <span className='bottom-line'>peoples</span>
-                          Who Need It.
-                        </h1>
+                        </span> */}
+                        <h2 style={{ color: "#fff", fontWeight: "bold" }}>
+                          We're transforming <br />
+                          agriculture in Nigeria
+                        </h2>
                         <div className='banner__content-cta cta'>
                           <Link
                             href='/our-causes'
@@ -97,7 +145,7 @@ const BannerOne = () => {
                             title='about us'
                             className='btn--tertiary'
                           >
-                            Discover More{" "}
+                            Find out more{" "}
                             <i className='fa-solid fa-arrow-right' />
                           </Link>
                           <Link
@@ -106,7 +154,7 @@ const BannerOne = () => {
                             title='contact us'
                             className='btn--primary'
                           >
-                            Get A Quote{" "}
+                            Book a Service{" "}
                             <i className='fa-solid fa-arrow-right' />
                           </Link>
                         </div>
@@ -116,55 +164,8 @@ const BannerOne = () => {
                 </div>
               </div>
             </div>
-            <div className='swiper-slide'>
-              <div className='banner-two__slider-single'>
-                <div
-                  className='banner-two__slider-bg'
-                  style={{
-                    backgroundImage:
-                      "url(/assets/images/banner/banner-two-bg.png)",
-                  }}
-                ></div>
-                <div className='container'>
-                  <div className='row'>
-                    <div className='col-12 col-md-9 col-lg-7 col-xxl-6'>
-                      <div className='banner-two__slider-content'>
-                        <span className='sub-title'>
-                          <i className='icon-donation' />
-                          Start donating poor people
-                        </span>
-                        <h1>
-                          Giving help <br />
-                          To Those <span className='bottom-line'>peoples</span>
-                          Who Need It.
-                        </h1>
-                        <div className='banner__content-cta cta'>
-                          <Link
-                            href='/our-causes'
-                            aria-label='about us'
-                            title='about us'
-                            className='btn--tertiary'
-                          >
-                            Discover More{" "}
-                            <i className='fa-solid fa-arrow-right' />
-                          </Link>
-                          <Link
-                            href='/contact-us'
-                            aria-label='contact us'
-                            title='contact us'
-                            className='btn--primary'
-                          >
-                            Get A Quote{" "}
-                            <i className='fa-solid fa-arrow-right' />
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='swiper-slide'>
+            
+            {/* <div className='swiper-slide'>
               <div className='banner-two__slider-single'>
                 <div
                   className='banner-two__slider-bg'
@@ -211,7 +212,7 @@ const BannerOne = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </Slider>
         </div>
         <div className='slider-navigation d-none d-md-flex'>
@@ -243,10 +244,10 @@ const BannerOne = () => {
           data-aos-duration={1000}
           data-aos-delay={300}
         >
-          <img
+          {/* <img
             src='/assets/images/banner/banner-two-shape.png'
             alt='Image_inner'
-          />
+          /> */}
         </div>
         {/* <div className='sprade-shape'>
           <img
@@ -257,9 +258,9 @@ const BannerOne = () => {
             data-aos-duration={1000}
           />
         </div> */}
-        <div className='unity'>
+        {/* <div className='unity'>
           <img src='/assets/images/unity.png' alt='Image_inner' />
-        </div>
+        </div> */}
       </section>
     </>
   );

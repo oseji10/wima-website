@@ -1,14 +1,19 @@
+import BannerMain from "@/components/BannerMain";
 import BannerOne from "@/components/BannerOne";
 import BlogOne from "@/components/BlogOne";
 import CauseOne from "@/components/CauseOne";
 import CauseSliderTwo from "@/components/CauseSliderTwo";
 import CommunityOne from "@/components/CommunityOne";
+import CounterTwo from "@/components/CounterTwo";
 import CtaSectionOne from "@/components/CtaSectionOne";
 import DifferenceOne from "@/components/DifferenceOne";
 import DifferenceTwo from "@/components/DifferenceTwo";
 import FooterOne from "@/components/FooterOne";
 import HeaderOne from "@/components/HeaderOne";
 import HelpOne from "@/components/HelpOne";
+import InvestmentCalculator from "@/components/InvestmentCalculator";
+import MainCounter from "@/components/MainCounter";
+import OverviewOne from "@/components/OverviewOne";
 import PartnerOne from "@/components/PartnerOne";
 import Preloader from "@/components/Preloader";
 import TeamOne from "@/components/TeamOne";
@@ -30,7 +35,7 @@ const page = () => {
         <Preloader />
 
         {/* CustomCursor  */}
-        <CustomCursor />
+        {/* <CustomCursor /> */}
 
         {/* TopBarOne */}
         <TopBarOne />
@@ -39,25 +44,31 @@ const page = () => {
         <HeaderOne />
 
         {/* BannerOne */}
-        <BannerOne />
+        {/* <BannerOne /> */}
+        <BannerMain />
 
+        <InvestmentCalculator />
+
+        {/* Counter Two */}
+        {/* <CounterTwo /> */}
+        <MainCounter />
         {/* PartnerOne */}
-        <PartnerOne />
+        {/* <PartnerOne /> */}
 
         {/* DifferenceOne */}
         <DifferenceOne />
 
         {/* HelpOne */}
-        <HelpOne />
+        {/* <HelpOne /> */}
 
         {/* CauseOne */}
         <CauseOne />
 
         {/* CtaSectionOne */}
-        <CtaSectionOne />
+        {/* <CtaSectionOne /> */}
 
         {/* TeamOne */}
-        <TeamOne />
+        {/* <TeamOne /> */}
 
         {/* CommunityOne */}
         <CommunityOne />
@@ -66,7 +77,7 @@ const page = () => {
         <TestimonialOne />
 
         {/* CauseSliderTwo */}
-        <CauseSliderTwo />
+        {/* <CauseSliderTwo /> */}
 
         {/* DifferenceTwo */}
         <DifferenceTwo />

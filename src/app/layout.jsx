@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <InitializeAOS />
         <RouteScrollToTop />
-        <ColorPalate />
+        {/* <ColorPalate /> */}
 
         {children}
 

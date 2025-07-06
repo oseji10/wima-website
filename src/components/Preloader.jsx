@@ -12,8 +12,9 @@ const Preloader = () => {
     <>
       {active ? (
         <div className='preloader'>
-          <i className='icon-donation' />
-          <p>CHARIFUND</p>
+          <i className='' />
+          {/* <i className='icon-donation' /> */}
+          <p>WIMA</p>
         </div>
       ) : (
         <div></div>

@@ -45,17 +45,14 @@ const DifferenceOne = () => {
                 data-aos='fade-up'
                 data-aos-duration={1000}
               >
-                <span className='sub-title'>
+                {/* <span className='sub-title'>
                   <i className='icon-donation' />
                   Start donating poor people
-                </span>
+                </span> */}
                 <h2 className='title-animation_inner'>
-                  Charity With Difference
-                </h2>
+Why Choose WIMA?                </h2>
                 <p>
-                  Join our monthly giving program to provide consistent support
-                  to our initiatives. Regular contributions, no matter the size,
-                  help us plan and sustain long-term projects.
+                  At Women in Mechanized Agriculture Association of West Africa (WIMA), we are redefining the agricultural landscape by empowering women to lead in mechanized farming. Our innovative approach, industry expertise, and commitment to sustainability set us apart. Here’s why you should choose WIMA:
                 </p>
               </div>
             </div>
@@ -85,11 +82,12 @@ const DifferenceOne = () => {
                           </div>
                           <div className='difference__single-content'>
                             <h5>
-                              <Link href='/cause-details'>Child Education</Link>
+                              <Link href='/become-a-member'>Women-owned, Women-led</Link>
                             </h5>
                             <p>
-                              Set up a secure and user-friendly online donation
-                              platform that accepts multiple
+                             We are the first women-led mechanization service providers dedicated to equipping
+                             female farmers with modern agricultural tools and expertise. Our programs uplift women,
+                             ensuring they own, manage and benefit from mechanized farming.
                             </p>
                           </div>
                         </div>
@@ -109,7 +107,7 @@ const DifferenceOne = () => {
                           </div>
                           <div className='difference__single-content'>
                             <h5>
-                              <Link href='/cause-details'>Healthy Food</Link>
+                              <Link href='/cause-details'>Partner With Us</Link>
                             </h5>
                             <p>
                               Set up a secure and user-friendly online donation
@@ -119,7 +117,7 @@ const DifferenceOne = () => {
                         </div>
                       </div>
                     </div>
-                    <div className='swiper-slide px-2'>
+                    {/* <div className='swiper-slide px-2'>
                       <div className='difference__single-wrapper'>
                         <div
                           className='difference__single difference__single-third '
@@ -190,7 +188,7 @@ const DifferenceOne = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                     <div className='swiper-slide px-2'>
                       <div className='difference__single-wrapper'>
                         <div
@@ -205,7 +203,7 @@ const DifferenceOne = () => {
                           </div>
                           <div className='difference__single-content'>
                             <h5>
-                              <Link href='/cause-details'>Medical Care</Link>
+                              <Link href='/cause-details'>Request A Service</Link>
                             </h5>
                             <p>
                               Set up a secure and user-friendly online donation
@@ -220,7 +218,7 @@ const DifferenceOne = () => {
               </div>
             </div>
           </div>
-          <div className='slider-navigation'>
+          {/* <div className='slider-navigation'>
             <button
               onClick={() => sliderRef.current.slickPrev()}
               type='button'
@@ -239,9 +237,9 @@ const DifferenceOne = () => {
             >
               <i className='fa-solid fa-arrow-right' />
             </button>
-          </div>
+          </div> */}
         </div>
-        <div
+        {/* <div
           className='shape-hand'
           data-aos='fade-right'
           data-aos-duration={1000}
@@ -251,7 +249,7 @@ const DifferenceOne = () => {
             src='/assets/images/difference/shape-hand.png'
             alt='Image_inner'
           />
-        </div>
+        </div> */}
       </section>
     </>
   );

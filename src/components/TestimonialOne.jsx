@@ -54,13 +54,13 @@ const TestimonialOne = () => {
                 data-aos='fade-up'
                 data-aos-duration={1000}
               >
-                <span className='sub-title'>
+                {/* <span className='sub-title'>
                   <i className='icon-donation' />
                   Start donating poor people
-                </span>
+                </span> */}
                 <h2 className='title-animation_inner'>
-                  Our valueable <span>customer</span>
-                  Awesome Feedback
+                  What <span>women&nbsp;</span> 
+                  Are Saying About WIMA
                 </h2>
               </div>
             </div>
