@@ -19,6 +19,7 @@ import Preloader from "@/components/Preloader";
 import TeamOne from "@/components/TeamOne";
 import TestimonialOne from "@/components/TestimonialOne";
 import TopBarOne from "@/components/TopBarOne";
+import WelcomeModal from "@/components/WelcomeModal";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 
@@ -33,7 +34,6 @@ const page = () => {
       <section className='page-wrapper'>
         {/* Preloader */}
         <Preloader />
-
         {/* CustomCursor  */}
         {/* <CustomCursor /> */}
 
@@ -45,6 +45,7 @@ const page = () => {
 
         {/* BannerOne */}
         {/* <BannerOne /> */}
+    {/* <WelcomeModal /> */}
         <BannerMain />
 
         <InvestmentCalculator />
@@ -57,6 +58,8 @@ const page = () => {
 
         {/* DifferenceOne */}
         <DifferenceOne />
+
+        
 
         {/* HelpOne */}
         {/* <HelpOne /> */}

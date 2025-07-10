@@ -14,7 +14,7 @@ const BannerMain = () => {
     autoplay: true,
     autoplaySpeed: 6000,
     pauseOnHover: true,
-    arrows: true,
+    arrows: false,
   };
   return (
     <section className='banner-three'>
@@ -171,7 +171,7 @@ const BannerMain = () => {
                   </div>
                   <div className='m-four move-image'>
                     <img
-                      src='/assets/images/banner/m-four.png'
+                      src='/assets/images/banner/4.jpg'
                       alt='Image_inner'
                       data-aos='zoom-in'
                       data-aos-duration={1000}

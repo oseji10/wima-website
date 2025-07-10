@@ -3,6 +3,141 @@ import Link from "next/link";
 import NiceSelect from "nice-select2";
 import { useEffect, useRef } from "react";
 
+const servicesData = [
+  {
+    id: 1,
+    name: "Grain Drying Service",
+    category: "Drying",
+    provider: "AgriTech Solutions",
+    location: "Kaduna Hub - Soba",
+    rating: 5,
+    price: 1000, // 1000 Naira per KG
+    unit: "KG",
+    image: "/assets/images/services/drying1.jpg"
+  },
+  {
+    id: 2,
+    name: "Rice Threshing Service",
+    category: "Threshing",
+    provider: "FarmPro Services",
+    location: "Kano Hub - Kura",
+    rating: 4,
+    price: 1000, // 1000 Naira per KG
+    unit: "KG",
+    image: "/assets/images/services/thresher1.jpg"
+  },
+  {
+    id: 3,
+    name: "Water Pumping Service",
+    category: "Pumping",
+    provider: "AquaFarm Co.",
+    location: "Gombe Hub - Zambuk",
+    rating: 3,
+    price: 1000, // 1000 Naira per Acre
+    unit: "Acre",
+    image: "/assets/images/services/irrigation1.jpg"
+  },
+  {
+    id: 4,
+    name: "Crop Spraying Service",
+    category: "Spraying",
+    provider: "GreenSpray Ltd.",
+    location: "Adamawa Hub - Old Demsa",
+    rating: 5,
+    price: 1000, // 1000 Naira per Hectare
+    unit: "Hectare",
+    image: "/assets/images/services/spraying1.jpg"
+  },
+  {
+    id: 5,
+    name: "Corn Drying Service",
+    category: "Drying",
+    provider: "Harvest Helpers",
+    location: "Kaduna Hub - Kachia",
+    rating: 4,
+    price: 1000, // 1000 Naira per KG
+    unit: "KG",
+    image: "/assets/images/services/drying1.jpg"
+  },
+  {
+    id: 6,
+    name: "Wheat Threshing Service",
+    category: "Threshing",
+    provider: "GrainMasters",
+    location: "Kano Hub - Bagwai",
+    rating: 5,
+    price: 1000, // 1000 Naira per KG
+    unit: "KG",
+    image: "/assets/images/services/thresher1.jpg"
+  },
+  {
+    id: 7,
+    name: "Irrigation Pumping Service",
+    category: "Pumping",
+    provider: "WaterWorks",
+    location: "Gombe Hub - Malam Sidi",
+    rating: 4,
+    price: 1000, // 1000 Naira per Acre
+    unit: "Acre",
+    image: "/assets/images/services/irrigation1.jpg"
+  },
+  {
+    id: 8,
+    name: "Pesticide Spraying Service",
+    category: "Spraying",
+    provider: "CropCare",
+    location: "Adamawa Hub - Numan",
+    rating: 3,
+    price: 1000, // 1000 Naira per Hectare
+    unit: "Hectare",
+    image: "/assets/images/services/spraying1.jpg"
+  },
+  {
+    id: 9,
+    name: "Soybean Drying Service",
+    category: "Drying",
+    provider: "AgriDry",
+    location: "Kaduna Hub - Zaria",
+    rating: 5,
+    price: 1000, // 1000 Naira per KG
+    unit: "KG",
+    image: "/assets/images/services/drying1.jpg"
+  },
+  {
+    id: 10,
+    name: "Barley Threshing Service",
+    category: "Threshing",
+    provider: "FarmTech",
+    location: "Kano Hub - Gwarzo",
+    rating: 4,
+    price: 1000, // 1000 Naira per KG
+    unit: "KG",
+    image: "/assets/images/services/thresher1.jpg"
+  },
+  {
+    id: 11,
+    name: "Field Pumping Service",
+    category: "Pumping",
+    provider: "HydroFarm",
+    location: "Gombe Hub - Gyalengu",
+    rating: 5,
+    price: 1000, // 1000 Naira per Acre
+    unit: "Acre",
+    image: "assets/images/services/pumping3.png"
+  },
+  {
+    id: 12,
+    name: "Herbicide Spraying Service",
+    category: "Spraying",
+    provider: "SafeSpray",
+    location: "Adamawa Hub - Gyawana",
+    rating: 4,
+    price: 1000, // 1000 Naira per Hectare
+    unit: "Hectare",
+    image: "assets/images/services/spraying3.png"
+  }
+];
+
 const BookService = () => {
   const priceRef = useRef(null);
 
@@ -11,6 +146,13 @@ const BookService = () => {
       new NiceSelect(priceRef.current);
     }
   }, []);
+
+  const renderStars = (rating) => {
+    return Array(5).fill().map((_, i) => (
+      <i key={i} className={`icon-star ${i < rating ? 'checked' : ''}`} />
+    ));
+  };
+
   return (
     <section className='shop'>
       <div className='container'>
@@ -29,9 +171,9 @@ const BookService = () => {
                 <form action='#' method='post'>
                   <input
                     type='text'
-                    name='search-product'
-                    id='searchProduct'
-                    placeholder='Search Here...'
+                    name='search-service'
+                    id='searchService'
+                    placeholder='Search Services...'
                     required=''
                   />
                   <button type='submit'>
@@ -46,56 +188,32 @@ const BookService = () => {
                 data-aos-delay={100}
               >
                 <div className='intro'>
-                  <h5>Categories</h5>
+                  <h5>Service Categories</h5>
                 </div>
                 <div className='sidebar-list'>
                   <ul>
                     <li>
-                      <Link href='/shop'>
+                      <Link href='/services'>
                         <i className='fa-solid fa-angle-right' />
-                        Brochures
+                        Drying
                       </Link>
                     </li>
                     <li>
-                      <Link href='/shop'>
+                      <Link href='/services'>
                         <i className='fa-solid fa-angle-right' />
-                        Business Cards
+                        Threshing
                       </Link>
                     </li>
                     <li>
-                      <Link href='/shop'>
+                      <Link href='/services'>
                         <i className='fa-solid fa-angle-right' />
-                        Calendars printing
+                        Pumping
                       </Link>
                     </li>
                     <li>
-                      <Link href='/shop'>
+                      <Link href='/services'>
                         <i className='fa-solid fa-angle-right' />
-                        Design Online
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='/shop'>
-                        <i className='fa-solid fa-angle-right' />
-                        Flyers Design
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='/shop'>
-                        <i className='fa-solid fa-angle-right' />
-                        Folded Leaflets
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='/shop'>
-                        <i className='fa-solid fa-angle-right' />
-                        t-shirt printing
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='/shop'>
-                        <i className='fa-solid fa-angle-right' />
-                        Gift item printing
+                        Spraying
                       </Link>
                     </li>
                   </ul>
@@ -117,13 +235,13 @@ const BookService = () => {
                       type='range'
                       name='price__range'
                       id='priceRange'
-                      max={200}
-                      min={1}
-                      defaultValue={100}
+                      max={250}
+                      min={100}
+                      defaultValue={175}
                     />
                   </div>
                   <div className='filter-cta'>
-                    <p>$0 - $200</p>
+                    <p>₦100 - ₦250</p>
                     <button
                       className='btn--primary'
                       aria-label='filter'
@@ -151,11 +269,11 @@ const BookService = () => {
                       name='donation-payment'
                       defaultChecked=''
                     />
-                    <label htmlFor='sizeOne'>36"x80" (8)</label>
+                    <label htmlFor='sizeOne'>Small Scale (8)</label>
                   </div>
                   <div className='radio-single'>
                     <input type='radio' id='sizeTwo' name='donation-payment' />
-                    <label htmlFor='sizeTwo'>36"x96" (60)</label>
+                    <label htmlFor='sizeTwo'>Medium Scale (10)</label>
                   </div>
                   <div className='radio-single'>
                     <input
@@ -163,11 +281,11 @@ const BookService = () => {
                       id='sizeThree'
                       name='donation-payment'
                     />
-                    <label htmlFor='sizeThree'>72"x80" (7)</label>
+                    <label htmlFor='sizeThree'>Large Scale (7)</label>
                   </div>
                   <div className='radio-single'>
                     <input type='radio' id='sizeFour' name='donation-payment' />
-                    <label htmlFor='sizeFour'>72"x96" (21)</label>
+                    <label htmlFor='sizeFour'>Industrial Scale (5)</label>
                   </div>
                 </div>
               </div>
@@ -193,8 +311,8 @@ const BookService = () => {
                         <i className='icon-star checked' />
                         <i className='icon-star checked' />
                         <i className='icon-star checked' />
-                        <i className='icon-star checked' />
-                        <i className='icon-star checked' />
+                        <i className='icon-star ' />
+                        <i className='icon-star ' />
                       </span>
                       (5 Star)
                     </label>
@@ -209,8 +327,8 @@ const BookService = () => {
                       <span className='review'>
                         <i className='icon-star checked' />
                         <i className='icon-star checked' />
-                        <i className='icon-star checked' />
-                        <i className='icon-star checked' />
+                        <i className='icon-star ' />
+                        <i className='icon-star ' />
                         <i className='icon-star' />
                       </span>
                       (4 Star)
@@ -240,7 +358,7 @@ const BookService = () => {
                       name='donation-payment'
                     />
                     <label htmlFor='reviewFour'>
-                      <span className='review'>
+                      <span limit='2'>
                         <i className='icon-star checked' />
                         <i className='icon-star checked' />
                         <i className='icon-star' />
@@ -275,16 +393,16 @@ const BookService = () => {
                 data-aos-duration={1000}
                 data-aos-delay={100}
               >
-                <div className='intro'>
+                <div class='intro'>
                   <h5>Popular Tags</h5>
                 </div>
                 <div className='tag-wrapper'>
-                  <Link href='/shop'>t-shirt</Link>
-                  <Link href='/shop'>Banner Design</Link>
-                  <Link href='/shop'>Brochures</Link>
-                  <Link href='/shop'>Landing</Link>
-                  <Link href='/shop'>Print</Link>
-                  <Link href='/shop'>Business Card</Link>
+                  <Link href='/services'>Drying</Link>
+                  <Link href='/services'>Threshing</Link>
+                  <Link href='/services'>Pumping</Link>
+                  <Link href='/services'>Spraying</Link>
+                  <Link href='/services'>Agricultural</Link>
+                  <Link href='/services'>Farming</Link>
                 </div>
               </div>
             </div>
@@ -294,7 +412,7 @@ const BookService = () => {
               <div className='shop__content-intro'>
                 <div className='shop-intro__left'>
                   <p>
-                    Showing <strong>12</strong> of 21 Results
+                    Showing <strong>{servicesData.length}</strong> of {servicesData.length} Services
                   </p>
                 </div>
                 <div className='shop-intro__right'>
@@ -318,606 +436,57 @@ const BookService = () => {
                 </div>
               </div>
               <div className='row gutter-30'>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/one.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
+                {servicesData.map((service, index) => (
+                  <div key={service.id} className='col-12 col-sm-6 col-lg-4'>
+                    <div
+                      className='shop__single'
+                      data-aos='fade-up'
+                      data-aos-duration={1000}
+                      data-aos-delay={index % 3 * 100}
+                    >
+                      <div className='shop__single-thumb'>
+                        <Link href={`/service-details/${service.id}`}>
+                          <img
+                            src={service.image}
+                            alt={`${service.name}_image`}
+                          />
                         </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
-                        </Link>
-                      </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </div>
-                      <p>
-                        <Link href='/product-details'>
-                          Smart wireless headphone
-                        </Link>
-                      </p>
-                      <p>$112.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                    data-aos-delay={100}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/two.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
-                        </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
+                        <div className='shop-thumb'>
+                          <Link href={`/service-details/${service.id}`}>
+                            <i className='fa-regular fa-eye' />
+                          </Link>
+                          <Link href='/cart'>
+                            <i className='icon-heart' />
+                          </Link>
+                          <Link href='/checkout'>
+                                                  <i className='fa-solid fa-arrow-right-arrow-left' />
+
+                          </Link>
+                        </div>
+                        <Link
+                          href={`/service-details/${service.id}`}
+                          className='btn--primary'
+                          aria-label='book service'
+                          title='book service'
+                        >
+                          Book Service
                         </Link>
                       </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
+                      <div className='shop__single-content'>
+                        <div className='review'>
+                          {renderStars(service.rating)}
+                        </div>
+                        <p>
+                          <Link href={`/service-details/${service.id}`}>
+                            {service.name}
+                          </Link>
+                        </p>
+                        <p>{service.provider} - {service.location}</p>
+                        <p>₦{service.price.toFixed(2)} per {service.unit}</p>
                       </div>
-                      <p>
-                        <Link href='/product-details'>Go pro hero camera</Link>
-                      </p>
-                      <p>$160.00</p>
                     </div>
                   </div>
-                </div>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                    data-aos-delay={200}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/four.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
-                        </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
-                        </Link>
-                      </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </div>
-                      <p>
-                        <Link href='/product-details'>Colorful apple Ipad</Link>
-                      </p>
-                      <p>$178.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/four.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
-                        </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
-                        </Link>
-                      </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </div>
-                      <p>
-                        <Link href='/product-details'>
-                          Humidifiler white grow
-                        </Link>
-                      </p>
-                      <p>$190.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                    data-aos-delay={100}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/five.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
-                        </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
-                        </Link>
-                      </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </div>
-                      <p>
-                        <Link href='/product-details'>
-                          Apple Iphone 16 promax
-                        </Link>
-                      </p>
-                      <p>$160.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                    data-aos-delay={200}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/six.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
-                        </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
-                        </Link>
-                      </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </div>
-                      <p>
-                        <Link href='/product-details'>
-                          Instax pro camera hero
-                        </Link>
-                      </p>
-                      <p>$178.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/seven.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
-                        </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
-                        </Link>
-                      </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </div>
-                      <p>
-                        <Link href='/product-details'>
-                          VISION RAC Micro Oven
-                        </Link>
-                      </p>
-                      <p>$162.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                    data-aos-delay={100}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/eight.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
-                        </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
-                        </Link>
-                      </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </div>
-                      <p>
-                        <Link href='/product-details'>
-                          Logitech Mouse Havit
-                        </Link>
-                      </p>
-                      <p>$260.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                    data-aos-delay={200}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/nine.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
-                        </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
-                        </Link>
-                      </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </div>
-                      <p>
-                        <Link href='/product-details'>
-                          Macbook m1 cheap pro
-                        </Link>
-                      </p>
-                      <p>$178.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/one.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
-                        </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
-                        </Link>
-                      </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </div>
-                      <p>
-                        <Link href='/product-details'>
-                          Smart wireless headphone
-                        </Link>
-                      </p>
-                      <p>$112.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                    data-aos-delay={100}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/two.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
-                        </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
-                        </Link>
-                      </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </div>
-                      <p>
-                        <Link href='/product-details'>Go pro hero camera</Link>
-                      </p>
-                      <p>$160.00</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-12 col-sm-6 col-lg-4'>
-                  <div
-                    className='shop__single'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                    data-aos-delay={200}
-                  >
-                    <div className='shop__single-thumb'>
-                      <Link href='/product-details'>
-                        <img
-                          src='assets/images/shop/four.png'
-                          alt='Image_inner'
-                        />
-                      </Link>
-                      <div className='shop-thumb'>
-                        <Link href='/product-details'>
-                          <i className='fa-regular fa-eye' />
-                        </Link>
-                        <Link href='/cart'>
-                          <i className='icon-heart' />
-                        </Link>
-                        <Link href='/checkout'>
-                          <i className='fa-solid fa-arrow-right-arrow-left' />
-                        </Link>
-                      </div>
-                      <Link
-                        href='/product-details'
-                        className='btn--primary'
-                        aria-label='add to cart'
-                        title='add to cart'
-                      >
-                        Add To Cart
-                      </Link>
-                    </div>
-                    <div className='shop__single-content'>
-                      <div className='review'>
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </div>
-                      <p>
-                        <Link href='/product-details'>Colorful apple Ipad</Link>
-                      </p>
-                      <p>$178.00</p>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
               <div className='row'>
                 <div className='col-12'>
@@ -933,15 +502,15 @@ const BookService = () => {
                         </button>
                       </li>
                       <li>
-                        <Link href='/blog-list'>1</Link>
+                        <Link href='/services'>1</Link>
                       </li>
                       <li>
-                        <Link href='/blog-list' className='active'>
+                        <Link href='/services' className='active'>
                           2
                         </Link>
                       </li>
                       <li>
-                        <Link href='/blog-list'>3</Link>
+                        <Link href='/services'>3</Link>
                       </li>
                       <li>
                         <button>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const TeamOne = () => {
@@ -33,7 +34,9 @@ const TeamOne = () => {
                 <div className='team__single van-tilt'>
                   <div className='team__single-thumb'>
                     <Link href='/team-details'>
-                      <img src='assets/images/team/hadiza.png' alt='Image_inner' />
+                      {/* <img src='assets/images/team/hadiza.png' alt='Image_inner' /> */}
+                    <Image src="assets/images/team/hadiza.png" alt="Home Icon" width={300} height={70} />
+
                     </Link>
                     <div className='team__icons'>
                       <div className='team__single-content__icon'>

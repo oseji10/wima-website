@@ -51,13 +51,13 @@ const FooterOne = () => {
               >
                 <div className='footer-two__widget-logo'>
                   <Link href='/'>
-                    <img src='assets/images/wima-base.png' alt='Image_inner' />
+                    <img src='/assets/images/wima-base.png'width="40%" alt='Image_inner' />
                   </Link>
                 </div>
                 <div className='footer-two__widget-content'>
                   <p>
-                    Our secure online donation platform allows you to make
-                    contributions quickly and safely. Choose from various.
+                    Our secure online payment platform allows you to pay for
+                    services quickly, conveniently and safely. Choose a service provider from a location close to you.
                   </p>
                   <div className='social'>
                     <Link

@@ -264,17 +264,9 @@ const HeaderOne = () => {
                                   : ""
                               }
                             >
-                              <Link href='/team'>The Team</Link>
+                              <Link href='/our-team'>The Team</Link>
                             </li>
-                            <li
-                              className={
-                                ["/faqs"].includes(pathname)
-                                  ? "active"
-                                  : ""
-                              }
-                            >
-                              <Link href='/faqs'>FAQs</Link>
-                            </li>
+                            
 
                             <li
                               className={
@@ -286,9 +278,30 @@ const HeaderOne = () => {
                               <Link href='#'>What We Do</Link>
                             </li>
 
+                            <li
+                              className={
+                                ["#"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='#'>Where We Work</Link>
+                            </li>
+
+
+                            <li
+                              className={
+                                ["/faqs"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='/faqs'>FAQs</Link>
+                            </li>
+
                           </ul>
                         </li>
-                        
+
                         {/* <li
                           className={`navbar__item nav-fade ${
                             ["/about-us"].includes(pathname) ? "active" : ""
