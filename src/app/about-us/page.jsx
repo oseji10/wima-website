@@ -15,7 +15,7 @@ import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 
 export const metadata = {
-  title: "WIMA | Women in Mechanized Agriculture",
+  title: "About Us | Women in Mechanized Agriculture",
   description: "Empowering women one community at a time",
 };
 
@@ -27,7 +27,7 @@ const page = () => {
         <Preloader />
 
         {/* CustomCursor  */}
-        <CustomCursor />
+        {/* <CustomCursor /> */}
 
         {/* TopBarOne */}
         <TopBarOne />
@@ -39,28 +39,28 @@ const page = () => {
         <BreadcrumbOne title='About Us' />
 
         {/* HelpOne */}
-        <HelpOne />
+        {/* <HelpOne /> */}
 
         {/* CtaSectionTwo */}
-        <CtaSectionTwo />
+        {/* <CtaSectionTwo /> */}
 
         {/* TeamTwo */}
-        <TeamTwo />
+        {/* <TeamTwo /> */}
 
         {/* FaqOne */}
-        <FaqOne />
+        {/* <FaqOne /> */}
 
         {/* TestimonialOne */}
-        <TestimonialOne />
+        {/* <TestimonialOne /> */}
 
         {/* ContactOne */}
-        <ContactOne />
+        {/* <ContactOne /> */}
 
         {/* DifferenceTwo */}
         <DifferenceTwo />
 
         {/* GalleryOne */}
-        <GalleryOne />
+        {/* <GalleryOne /> */}
 
         {/* FooterOne */}
         <FooterOne />

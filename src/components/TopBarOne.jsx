@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import NiceSelect from "nice-select2";
+import { color } from "framer-motion";
 
 const TopBarOne = () => {
   const currencyRef_one = useRef(null);
@@ -63,8 +64,8 @@ const TopBarOne = () => {
                         <option value="euro">Euro</option>
                       </select>
                     </div> */}
-                    {/* <div className="select-country ">
-                      <select
+                    <div>
+                      {/* <select
                         ref={countryRef_one}
                         name="country"
                         defaultValue={"English"}
@@ -82,8 +83,9 @@ const TopBarOne = () => {
                         <option data-display='<i class="fi-it"></i> Italian'>
                           Italian
                         </option>
-                      </select>
-                    </div> */}
+                      </select> */}
+                      <a style="color: #fff" href="https://mamatrak.wimanigeria.com">MamaTrak</a>
+                    </div>
                     <div className="social">
                       <a
                         href="https://web.facebook.com/womeninmechanizedagriculture?_rdc=1&_rdr"
@@ -101,14 +103,14 @@ const TopBarOne = () => {
                       >
                         <i className="fa-brands fa-instagram"></i>
                       </a>
-                      {/* <a
-                        href="#"
+                      <a
+                        href="https://x.com/wimanigeria"
                         target="_blank"
                         rel="noreferrer"
-                        title="twitter"
+                        title="X"
                       >
-                        <i className="fa-brands fa-twitter"></i>
-                      </a> */}
+                        <i className="fa-brands fa-x-twitter"></i>
+                      </a>
                       <a
                         href="https://www.linkedin.com/company/106617937/admin/page-posts/published/"
                         target="_blank"

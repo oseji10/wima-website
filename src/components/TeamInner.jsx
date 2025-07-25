@@ -565,7 +565,7 @@ const TeamInner = () => {
               <div className='team__single van-tilt'>
                 <div className='team__single-thumb'>
                   <Link href='/team-details'>
-                    {/* <img src='/assets/images/team/aishayakubu.jpg' alt='Image_inner' /> */}
+                    <img src='/assets/images/team/placeholder.webp' alt='Image_inner' />
                   </Link>
                   <div className='team__icons'>
                     <div className='team__single-content__icon'>

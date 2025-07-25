@@ -255,7 +255,7 @@ const HeaderOne = () => {
                                   : ""
                               }
                             >
-                              <Link href='#'>About Us</Link>
+                              <Link href='/about-us'>About Us</Link>
                             </li>
                             <li
                               className={

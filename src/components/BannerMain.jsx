@@ -52,7 +52,7 @@ const BannerMain = () => {
                         Discover More <i className='fa-solid fa-arrow-right' />
                       </Link>
                       <Link
-                        href='/contact-us'
+                        href='/book-a-service'
                         aria-label='contact us'
                         title='contact us'
                         className='btn--primary'
@@ -82,7 +82,7 @@ const BannerMain = () => {
                         Find Out How <i className='fa-solid fa-arrow-right' />
                       </Link>
                       <Link
-                        href='/contact-us'
+                        href='#'
                         aria-label='contact us'
                         title='contact us'
                         className='btn--primary'
@@ -125,12 +125,12 @@ const BannerMain = () => {
                         Discover More <i className='fa-solid fa-arrow-right' />
                       </Link>
                       <Link
-                        href='/contact-us'
+                        href='/book-a-service'
                         aria-label='contact us'
                         title='contact us'
                         className='btn--primary'
                       >
-                        Get A Quote <i className='fa-solid fa-arrow-right' />
+                        Book A Service <i className='fa-solid fa-arrow-right' />
                       </Link>
                     </div>
                   </div>

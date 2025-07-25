@@ -56,8 +56,7 @@ const FooterOne = () => {
                 </div>
                 <div className='footer-two__widget-content'>
                   <p>
-                    Our secure online payment platform allows you to pay for
-                    services quickly, conveniently and safely. Choose a service provider from a location close to you.
+                    At WIMA, we're revolutionizing mechanized agriculture. We do this by encouraging more women inclusion in mechanized agriculture. Our mission is to empower as many women as possible
                   </p>
                   <div className='social'>
                     <Link
@@ -76,14 +75,14 @@ const FooterOne = () => {
                     >
                       <i className='fa-brands fa-instagram' />
                     </Link>
-                    {/* <Link
-                      href='https://x.com'
+                    <Link
+                      href='https://x.com/wimanigeria'
                       target='_blank'
-                      aria-label='share us on twitter'
-                      title='twitter'
+                      aria-label='share us on x'
+                      title='X'
                     >
-                      <i className='fa-brands fa-twitter' />
-                    </Link> */}
+                      <i className='fa-brands fa-x-twitter' />
+                    </Link>
                     <Link
                       href='https://www.linkedin.com/company/106617937/admin/page-posts/published/'
                       target='_blank'
@@ -120,7 +119,7 @@ const FooterOne = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='#'>
+                      <Link href='/our-team'>
                         <i className='fa-solid fa-arrow-right' />
                         The Team
                       </Link>
