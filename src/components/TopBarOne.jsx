@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import NiceSelect from "nice-select2";
 import { color } from "framer-motion";
+import Link from "next/link";
 
 const TopBarOne = () => {
   const currencyRef_one = useRef(null);
@@ -84,7 +85,20 @@ const TopBarOne = () => {
                           Italian
                         </option>
                       </select> */}
-                      <a style="color: #fff" href="https://mamatrak.wimanigeria.com">MamaTrak</a>
+                      &nbsp;
+                      <Link
+                        href="https://mamatrak.wimanigeria.com"
+                        style={{ color: "#fff" }}
+                      > &nbsp; 
+                        MamaTrak &nbsp;
+                      </Link> 
+                      | &nbsp;
+                      <Link
+                        href="https://mamatrak.wimanigeria.com"
+                        style={{ color: "#fff" }}
+                      >
+                        Dashboards
+                      </Link>
                     </div>
                     <div className="social">
                       <a

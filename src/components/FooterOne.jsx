@@ -55,7 +55,7 @@ const FooterOne = () => {
                   </Link>
                 </div>
                 <div className='footer-two__widget-content'>
-                  <p>
+                  <p style={{textTransform: 'none'}}>
                     At WIMA, we're revolutionizing mechanized agriculture. We do this by encouraging more women inclusion in mechanized agriculture. Our mission is to empower as many women as possible
                   </p>
                   <div className='social'>
@@ -218,6 +218,7 @@ const FooterOne = () => {
                       <Link
                         href='/https://maps.app.goo.gl/Gr9pTNqz5FRNrjQw8'
                         target='_blank'
+                        style={{textTransform: 'none'}}
                       >
                         <i className='fa-solid fa-location-dot' />
                         House 2, Block B, Sani Zangon Daura Estate, Kado, Abuja, Nigeria
@@ -230,8 +231,8 @@ const FooterOne = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link  className="footer-two__widget-content--contact2" href='/mailto:info@wimanigeria.com'>
-                        <i className='fa-regular fa-envelope' />
+                      <Link style={{textTransform: 'none'}}  className="footer-two__widget-content--contact2" href='/mailto:info@wimanigeria.com'>
+                        <i className='fa-regular fa-envelope'  />
                         info@wimanigeria.com
                       </Link>
                     </li>

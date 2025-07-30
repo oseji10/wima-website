@@ -16,6 +16,7 @@ import MainCounter from "@/components/MainCounter";
 import OverviewOne from "@/components/OverviewOne";
 import PartnerOne from "@/components/PartnerOne";
 import Preloader from "@/components/Preloader";
+import ROIPopup from "@/components/ROIPopup";
 import TeamOne from "@/components/TeamOne";
 import TestimonialOne from "@/components/TestimonialOne";
 import TopBarOne from "@/components/TopBarOne";
@@ -37,6 +38,7 @@ const page = () => {
         {/* CustomCursor  */}
         {/* <CustomCursor /> */}
 
+<ROIPopup/>
         {/* TopBarOne */}
         <TopBarOne />
 

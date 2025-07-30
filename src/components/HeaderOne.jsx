@@ -268,25 +268,17 @@ const HeaderOne = () => {
                             </li>
                             
 
-                            <li
+                            {/* <li
                               className={
                                 ["#"].includes(pathname)
                                   ? "active"
                                   : ""
                               }
                             >
-                              <Link href='#'>What We Do</Link>
-                            </li>
+                              <Link href='#'>Our Impact</Link>
+                            </li> */}
 
-                            <li
-                              className={
-                                ["#"].includes(pathname)
-                                  ? "active"
-                                  : ""
-                              }
-                            >
-                              <Link href='#'>Where We Work</Link>
-                            </li>
+                            
 
 
                             <li
@@ -394,7 +386,7 @@ const HeaderOne = () => {
                                 ["/faq"].includes(pathname) ? "active" : ""
                               }
                             >
-                              <Link href='/faq'>Photo Gallery</Link>
+                              <Link href='/photo-gallery'>Photo Gallery</Link>
                             </li>
                             <li
                               className={

@@ -1,4 +1,5 @@
 import BreadcrumbOne from "@/components/BreadcrumbOne";
+import BreadcrumbTwo from "@/components/BreadcrumbTwo";
 import ContactOne from "@/components/ContactOne";
 import CtaSectionTwo from "@/components/CtaSectionTwo";
 import DifferenceTwo from "@/components/DifferenceTwo";
@@ -24,7 +25,7 @@ const page = () => {
     <AOSWrap>
       <section className='page-wrapper'>
         {/* Preloader */}
-        <Preloader />
+        {/* <Preloader /> */}
 
         {/* CustomCursor  */}
         {/* <CustomCursor /> */}
@@ -36,7 +37,7 @@ const page = () => {
         <HeaderOne />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='About Us' />
+        <BreadcrumbTwo title='About Us' />
 
         {/* HelpOne */}
         {/* <HelpOne /> */}

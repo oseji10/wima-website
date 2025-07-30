@@ -10,14 +10,12 @@ const ContactUsInner = () => {
                 data-aos='fade-up'
                 data-aos-duration={1000}
               >
-                <span className='sub-title'>
+                {/* <span className='sub-title'>
                   <i className='icon-donation' /> Get In Touch
-                </span>
+                </span> */}
                 <h2 className='title-animation_inner'>Contact Us</h2>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  inventore
+                  Perhaps you want to reach out for further inquiries. Please say hello to us via any of the channels below:
                 </p>
               </div>
               <div className='contact-main__inner cta'>
@@ -27,14 +25,9 @@ const ContactUsInner = () => {
                   </div>
                   <div className='content'>
                     <h6>Location</h6>
-                    <p>
-                      <a
-                        href='https://maps.app.goo.gl/Gr9pTNqz5FRNrjQw8'
-                        target='_blank'
-                        rel='noreferrer'
-                      >
-                        55 Main street, 2nd block, Melbourne, Australia
-                      </a>
+                    <p style={{textTransform: 'none !important'}}>
+                        House 2, Block B, Sani Zangon Daura Estate, Kado, Abuja, Nigeria
+                      
                     </p>
                   </div>
                 </div>
@@ -45,11 +38,11 @@ const ContactUsInner = () => {
                   <div className='content'>
                     <h6>Phone</h6>
                     <p>
-                      <a href='tel:2305-587-3407'>+1 (368) 567 89 54 </a>
+                      <a href='tel:2305-587-3407'>+234-806-4237-096 </a>
                     </p>
-                    <p>
+                    {/* <p>
                       <a href='tel:2305-587-3407'>+236 (456) 896 22</a>
-                    </p>
+                    </p> */}
                   </div>
                 </div>
                 <div className='contact-main__single'>
@@ -59,13 +52,13 @@ const ContactUsInner = () => {
                   <div className='content'>
                     <h6>Email</h6>
                     <p>
-                      <a href='mailto:support@example.com'>example@email.com</a>
+                      <a href='mailto:info@wimanigeria.com'>info@wimanigeria.com</a>
                     </p>
-                    <p>
+                    {/* <p>
                       <a href='mailto:support@example.com'>
                         charifund@email.com
                       </a>
-                    </p>
+                    </p> */}
                   </div>
                 </div>
                 <div className='contact-main__single'>
@@ -76,7 +69,7 @@ const ContactUsInner = () => {
                     <h6>Social</h6>
                     <div className='social'>
                       <a
-                        href='https://www.facebook.com/'
+                        href='https://web.facebook.com/womeninmechanizedagriculture?_rdc=1&_rdr'
                         target='_blank'
                         aria-label='share us on facebook'
                         title='facebook'
@@ -85,25 +78,25 @@ const ContactUsInner = () => {
                         <i className='fa-brands fa-facebook-f' />
                       </a>
                       <a
-                        href='https://vimeo.com/'
+                        href='https://x.com/wimanigeria'
                         target='_blank'
-                        aria-label='share us on vimeo'
+                        aria-label='share us on x'
                         title='vimeo'
                         rel='noreferrer'
                       >
-                        <i className='fa-brands fa-vimeo-v' />
+                        <i className='fa-brands fa-x-twitter' />
                       </a>
                       <a
-                        href='https://x.com/'
+                        href='https://www.instagram.com/wima.nigeria/'
                         target='_blank'
-                        aria-label='share us on twitter'
-                        title='twitter'
+                        aria-label='share us on instagram'
+                        title='instagram'
                         rel='noreferrer'
                       >
-                        <i className='fa-brands fa-twitter' />
+                        <i className='fa-brands fa-instagram' />
                       </a>
                       <a
-                        href='https://www.linkedin.com/'
+                        href='https://www.linkedin.com/company/106617937/admin/page-posts/published/'
                         target='_blank'
                         aria-label='share us on linkedin'
                         title='linkedin'
@@ -181,7 +174,7 @@ const ContactUsInner = () => {
                     title='submit message'
                     className='btn--primary'
                   >
-                    Get A Quote <i className='fa-solid fa-arrow-right' />
+                    Get In Touch <i className='fa-solid fa-arrow-right' />
                   </button>
                 </div>
               </form>
