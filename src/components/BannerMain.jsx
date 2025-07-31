@@ -44,7 +44,7 @@ const BannerMain = () => {
                     </p>
                     <div className='banner__content-cta cta'>
                       <Link
-                        href='/our-causes'
+                        href='#'
                         aria-label='about us'
                         title='about us'
                         className='btn--tertiary'
@@ -74,7 +74,7 @@ const BannerMain = () => {
                     </p>
                     <div className='banner__content-cta cta'>
                       <Link
-                        href='/our-causes'
+                        href='#'
                         aria-label='about us'
                         title='about us'
                         className='btn--tertiary'
@@ -117,7 +117,7 @@ const BannerMain = () => {
                     </p>
                     <div className='banner__content-cta cta'>
                       <Link
-                        href='/our-causes'
+                        href='#'
                         aria-label='about us'
                         title='about us'
                         className='btn--tertiary'

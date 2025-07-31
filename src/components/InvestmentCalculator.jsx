@@ -72,126 +72,117 @@ const InvestmentCalculator = () => {
   return (
     <section className="investment-calculator">
       <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div
-              className="calculator__inner"
-              data-aos="fade-up"
-              data-aos-duration={1000}
-              data-aos-delay={100}
-            >
-              <div className="calculator__form">
-                <h2 className="calculator__title">
-                  Mechanized Equipment Investment Calculator
-                </h2>
-                
-                <div className="calculator__progress">
-                  <div className="progress-bar-wrapper">
-                    <div className="progress-bar">
-                      <div
-                        className="progress-bar-percent"
-                        style={{ width: `${roiPercentage}%` }}
-                      >
-                        <span className="percent-value">{roiPercentage}%</span>
-                      </div>
-                    </div>
-                    <div className="progress-bar-label">
-                      <span>0%</span>
-                      <span>ROI: {roiPercentage}%</span>
-                      <span>100%</span>
-                    </div>
+        <div className="calculator__inner">
+          <div className="calculator__form">
+            <h2 className="calculator__title">
+              Mechanized Equipment Investment Calculator
+            </h2>
+            
+            <div className="calculator__progress">
+              <div className="progress-bar-wrapper">
+                <div className="progress-bar">
+                  <div
+                    className="progress-bar-percent"
+                    style={{ width: `${roiPercentage}%` }}
+                  >
+                    <span className="percent-value">{roiPercentage}%</span>
                   </div>
                 </div>
-
-                <div className="calculator__results">
-                  <div className="result-item">
-                    <label>Investment Amount</label>
-                    <div className="input-wrapper">
-                      <span className="currency">₦</span>
-                      <input
-                        type="text"
-                        value={investmentAmount}
-                        onChange={handleAmountChange}
-                        placeholder="0.00"
-                        className="investment-input"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="result-item">
-                    <label>Projected Return</label>
-                    <h3 className="return-amount">
-                      ₦{formatNumber(returnAmount.toFixed(2))}
-                    </h3>
-                  </div>
+                <div className="progress-bar-label">
+                  <span>0%</span>
+                  <span>ROI: {roiPercentage}%</span>
+                  <span>100%</span>
                 </div>
-
-                <div className="calculator__controls">
-                  <div className="control-group">
-                    <label htmlFor="investmentAsset">Equipment Type</label>
-                    <select
-                      id="investmentAsset"
-                      value={selectedAsset}
-                      onChange={handleAssetChange}
-                      className="investment-select"
-                    >
-                      {EQUIPMENT_OPTIONS.map((option) => (
-                        <option key={option.value} value={option.value}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="control-group">
-                    <label htmlFor="investmentPeriod">Investment Period</label>
-                    <select
-                      id="investmentPeriod"
-                      value={investmentPeriod}
-                      onChange={handlePeriodChange}
-                      className="investment-select"
-                    >
-                      {PERIOD_OPTIONS.map((option) => (
-                        <option key={option.value} value={option.value}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div className="calculator__info">
-                <span className="info-subtitle">Opportunity of a Lifetime</span>
-                <h3 className="info-title">
-                  <Link href="/investment-details">
-                    {selectedAsset.charAt(0).toUpperCase() + selectedAsset.slice(1)} Investment Program
-                  </Link>
-                </h3>
-                <p className="info-description">
-                  Invest in modern agricultural equipment and earn returns through
-                  our leasing program. Your investment helps farmers access quality
-                  equipment while generating steady returns for you.
-                </p>
-                <button 
-                  className="invest-now-btn"
-                  onClick={handleInvestNow}
-                >
-                  Invest Now
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
               </div>
             </div>
+
+            <div className="calculator__results">
+              <div className="result-item">
+                <label>Investment Amount</label>
+                <div className="input-wrapper">
+                  <span className="currency">₦</span>
+                  <input
+                    type="text"
+                    value={investmentAmount}
+                    onChange={handleAmountChange}
+                    placeholder="0.00"
+                    className="investment-input"
+                  />
+                </div>
+              </div>
+
+              <div className="result-item">
+                <label>Projected Return</label>
+                <h3 className="return-amount">
+                  ₦{formatNumber(returnAmount.toFixed(2))}
+                </h3>
+              </div>
+            </div>
+
+            <div className="calculator__controls">
+              <div className="control-group">
+                <label htmlFor="investmentAsset">Equipment Type</label>
+                <select
+                  id="investmentAsset"
+                  value={selectedAsset}
+                  onChange={handleAssetChange}
+                  className="investment-select"
+                >
+                  {EQUIPMENT_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="control-group">
+                <label htmlFor="investmentPeriod">Investment Period</label>
+                <select
+                  id="investmentPeriod"
+                  value={investmentPeriod}
+                  onChange={handlePeriodChange}
+                  className="investment-select"
+                >
+                  {PERIOD_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div className="calculator__info">
+            <span className="info-subtitle">Opportunity of a Lifetime</span>
+            <h3 className="info-title">
+              <Link href="/investment-details">
+                {selectedAsset.charAt(0).toUpperCase() + selectedAsset.slice(1)} Investment Program
+              </Link>
+            </h3>
+            <p className="info-description">
+              Invest in modern agricultural equipment and earn returns through
+              our leasing program. Your investment helps farmers access quality
+              equipment while generating steady returns for you.
+            </p>
+            <button 
+              className="invest-now-btn"
+              onClick={handleInvestNow}
+            >
+              Invest Now
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
 
       <style jsx>{`
         .investment-calculator {
-          padding: 2rem 0;
-          background: linear-gradient(135deg, #f9f9f9 0%, #f0f8f0 100%);
+          padding: 2rem;
+          background: linear-gradient(135deg, #f8f8f8 0%, #e8f0e8 100%);
           border-radius: 12px;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
@@ -214,8 +205,9 @@ const InvestmentCalculator = () => {
 
         .calculator__title {
           font-size: 1.8rem;
-          color: #2c3e50;
+          color: #122f2a;
           margin-bottom: 0.5rem;
+          font-weight: 700;
         }
 
         .calculator__progress {
@@ -227,7 +219,7 @@ const InvestmentCalculator = () => {
         }
 
         .progress-bar {
-          height: 10px;
+          height: 20px;
           background: #e0e0e0;
           border-radius: 5px;
           overflow: hidden;
@@ -237,7 +229,7 @@ const InvestmentCalculator = () => {
 
         .progress-bar-percent {
           height: 100%;
-          background: linear-gradient(90deg, #28a745, #5cb85c);
+          background: linear-gradient(90deg, #ffc107, #ffab00);
           position: relative;
           transition: width 0.5s ease;
           display: flex;
@@ -249,11 +241,11 @@ const InvestmentCalculator = () => {
           content: '';
           position: absolute;
           right: 0;
-          top: -5px;
-          width: 15px;
-          height: 15px;
+          // top: -5px;
+          width: 20px;
+          height: 20px;
           background: white;
-          border: 2px solid #28a745;
+          border: 2px solid #ffc107;
           border-radius: 50%;
         }
 
@@ -262,8 +254,8 @@ const InvestmentCalculator = () => {
           right: 20px;
           font-size: 0.8rem;
           font-weight: 600;
-          color: white;
-          background: #28a745;
+          color: #122f2a;
+          background: #ffc107;
           padding: 2px 6px;
           border-radius: 4px;
         }
@@ -276,7 +268,7 @@ const InvestmentCalculator = () => {
         }
 
         .progress-bar-label span:nth-child(2) {
-          color: #28a745;
+          color: #122f2a;
           font-weight: 600;
         }
 
@@ -309,7 +301,7 @@ const InvestmentCalculator = () => {
           position: absolute;
           left: 12px;
           font-weight: 600;
-          color: #333;
+          color: #122f2a;
         }
 
         .investment-input {
@@ -319,19 +311,20 @@ const InvestmentCalculator = () => {
           border-radius: 8px;
           font-size: 1.1rem;
           font-weight: 600;
-          color: #333;
+          color: #122f2a;
           transition: all 0.3s ease;
         }
 
         .investment-input:focus {
-          border-color: #28a745;
-          box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+          border-color: #ffc107;
+          box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
         }
 
         .return-amount {
-          color: #28a745;
+          color: #122f2a;
           font-size: 1.5rem;
           margin: 0;
+          font-weight: 700;
         }
 
         .calculator__controls {
@@ -352,7 +345,7 @@ const InvestmentCalculator = () => {
           border: 2px solid #e0e0e0;
           border-radius: 8px;
           font-size: 1rem;
-          color: #333;
+          color: #122f2a;
           background-color: white;
           cursor: pointer;
           transition: all 0.3s ease;
@@ -364,27 +357,28 @@ const InvestmentCalculator = () => {
         }
 
         .investment-select:hover {
-          border-color: #28a745;
+          border-color: #ffc107;
         }
 
         .investment-select:focus {
-          border-color: #28a745;
-          box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+          border-color: #ffc107;
+          box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
         }
 
         .calculator__info {
           padding: 1.5rem;
-          background: #f8f9fa;
+          background: #122f2a;
           border-radius: 8px;
           display: flex;
           flex-direction: column;
           gap: 1rem;
           position: relative;
+          color: white;
         }
 
         .info-subtitle {
           font-size: 0.9rem;
-          color: #28a745;
+          color: #ffc107;
           font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 1px;
@@ -392,8 +386,9 @@ const InvestmentCalculator = () => {
 
         .info-title {
           font-size: 1.5rem;
-          color: #2c3e50;
+          color: white;
           margin: 0;
+          font-weight: 700;
         }
 
         .info-title a {
@@ -403,11 +398,11 @@ const InvestmentCalculator = () => {
         }
 
         .info-title a:hover {
-          color: #28a745;
+          color: #ffc107;
         }
 
         .info-description {
-          color: #666;
+          color: rgba(255, 255, 255, 0.8);
           line-height: 1.6;
           margin-bottom: 1.5rem;
         }
@@ -417,21 +412,22 @@ const InvestmentCalculator = () => {
           align-items: center;
           gap: 0.8rem;
           padding: 0.8rem 1.5rem;
-          background: linear-gradient(90deg, #28a745, #5cb85c);
-          color: white;
-          font-weight: 600;
+          background: #ffc107;
+          color: #122f2a;
+          font-weight: 700;
           border: none;
           border-radius: 6px;
           cursor: pointer;
           transition: all 0.3s ease;
-          box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+          box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
           align-self: flex-start;
           margin-top: auto;
         }
 
         .invest-now-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
+          background: #ffab00;
+          box-shadow: 0 6px 15px rgba(255, 193, 7, 0.4);
         }
 
         .invest-now-btn svg {

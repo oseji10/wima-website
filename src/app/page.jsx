@@ -16,6 +16,7 @@ import MainCounter from "@/components/MainCounter";
 import OverviewOne from "@/components/OverviewOne";
 import PartnerOne from "@/components/PartnerOne";
 import Preloader from "@/components/Preloader";
+import PriceAlert from "@/components/PriceAlert";
 import ROIPopup from "@/components/ROIPopup";
 import TeamOne from "@/components/TeamOne";
 import TestimonialOne from "@/components/TestimonialOne";
@@ -54,7 +55,7 @@ const page = () => {
 
         {/* Counter Two */}
         {/* <CounterTwo /> */}
-        <MainCounter />
+        <MainCounter /><br/>
         {/* PartnerOne */}
         {/* <PartnerOne /> */}
 
@@ -90,6 +91,7 @@ const page = () => {
         {/* BlogOne */}
         {/* <BlogOne /> */}
 
+<PriceAlert/>
         {/* FooterOne */}
         <FooterOne />
       </section>

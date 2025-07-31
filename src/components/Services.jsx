@@ -99,20 +99,6 @@ const ServicesPage = () => {
 
   return (
     <div className="wima-services">
-      {/* Hero Section */}
-      {/* <section className="hero">
-        <div className="hero-overlay"></div>
-        <div className="container">
-          <div className="hero-content">
-            <span className="badge">Our Services</span>
-            <h1>Empowering Women Through Agricultural Mechanization</h1>
-            <p className="lead">
-              WIMA provides comprehensive mechanized farming solutions, training programs, and expert consulting services tailored for women in agriculture
-            </p>
-          </div>
-        </div>
-      </section> */}
-
       {/* Services Navigation */}
       <section className="services-nav">
         <div className="container">
@@ -158,6 +144,10 @@ const ServicesPage = () => {
       {/* Services Grid */}
       <section className="services-grid-section">
         <div className="container">
+          <div className="section-header">
+            <h2>Our <span className="highlight">Services</span></h2>
+            <p className="subtitle">Tailored agricultural solutions designed for women farmers</p>
+          </div>
           <div className="services-grid">
             {services[activeTab].map((service, index) => (
               <div className="service-card" key={index}>
@@ -198,7 +188,7 @@ const ServicesPage = () => {
         <div className="container">
           <div className="section-header">
             <span className="subtitle">Our Impact</span>
-            <h2>Transforming Agriculture Across West Africa</h2>
+            <h2>Transforming <span className="highlight">Agriculture</span> Across West Africa</h2>
           </div>
           <div className="stats-grid">
             <div className="stat-card">
@@ -221,95 +211,40 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      {/* <section className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h2>Ready to Elevate Your Farming Operations?</h2>
-            <p>Join hundreds of women who have transformed their agricultural businesses with WIMA's services</p>
-            <div className="cta-buttons">
-              <button className="primary-btn">
-                Get Started
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
-                </svg>
-              </button>
-              <button className="secondary-btn">
-                Contact Our Team
-              </button>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <style jsx>{`
         .wima-services {
           font-family: 'Inter', sans-serif;
-          color: #2C3E50;
+          color: #2D3748;
         }
 
-        /* Hero Section */
-        .hero {
+        .container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        .highlight {
+          color: #2F855A;
           position: relative;
-          height: 80vh;
-          min-height: 600px;
-          background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('/images/wima-hero.jpg');
-          background-size: cover;
-          background-position: center;
-          display: flex;
-          align-items: center;
-          color: white;
         }
 
-        .hero-overlay {
+        .highlight::after {
+          content: '';
           position: absolute;
-          top: 0;
+          bottom: 2px;
           left: 0;
           width: 100%;
-          height: 100%;
-          background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(92, 184, 92, 0.1) 100%);
-        }
-
-        .hero-content {
-          position: relative;
-          z-index: 2;
-          max-width: 800px;
-        }
-
-        .badge {
-          display: inline-block;
-          background: rgba(255,255,255,0.2);
-          backdrop-filter: blur(5px);
-          padding: 8px 20px;
-          border-radius: 50px;
-          font-size: 14px;
-          font-weight: 600;
-          letter-spacing: 1px;
-          margin-bottom: 20px;
-          text-transform: uppercase;
-        }
-
-        h1 {
-          font-size: 3.5rem;
-          font-weight: 700;
-          line-height: 1.2;
-          margin-bottom: 20px;
-          text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .lead {
-          font-size: 1.25rem;
-          line-height: 1.6;
-          opacity: 0.9;
-          margin-bottom: 30px;
-          max-width: 600px;
+          height: 8px;
+          background-color: rgba(47, 133, 90, 0.2);
+          z-index: -1;
         }
 
         /* Services Navigation */
         .services-nav {
           background: white;
           padding: 20px 0;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+          box-shadow: 0 2px 10px rgba(0,0,0,0.05);
           position: sticky;
           top: 0;
           z-index: 100;
@@ -323,40 +258,43 @@ const ServicesPage = () => {
 
         .tab-btn {
           display: flex;
-          flex-direction: column;
           align-items: center;
-          padding: 15px 25px;
+          gap: 10px;
+          padding: 12px 25px;
           background: transparent;
           border: none;
-          border-radius: 10px;
+          border-radius: 8px;
           cursor: pointer;
           transition: all 0.3s ease;
-          color: #6B7280;
+          color: #718096;
+          font-weight: 500;
+          border: 1px solid #E2E8F0;
         }
 
         .tab-btn:hover {
-          background: #F3F4F6;
-          color: #28A745;
+          background: #F7FAFC;
+          color: #2F855A;
+          border-color: #C6F6D5;
         }
 
         .tab-btn.active {
-          background: #28A745;
+          background: #2F855A;
           color: white;
-          box-shadow: 0 4px 6px rgba(40, 167, 69, 0.2);
+          box-shadow: 0 4px 6px rgba(47, 133, 90, 0.2);
+          border-color: #2F855A;
         }
 
         .icon-wrapper {
-          width: 40px;
-          height: 40px;
+          width: 24px;
+          height: 24px;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 8px;
         }
 
         .tab-btn svg {
-          width: 24px;
-          height: 24px;
+          width: 20px;
+          height: 20px;
           stroke-width: 2;
         }
 
@@ -366,28 +304,49 @@ const ServicesPage = () => {
 
         /* Services Grid */
         .services-grid-section {
-          padding: 80px 0;
-          background: #F9FAFB;
+          padding: 60px 0;
+          background: #F8F9FA;
+        }
+
+        .section-header {
+          text-align: center;
+          margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          margin-bottom: 15px;
+          color: #1A202C;
+        }
+
+        .section-header .subtitle {
+          color: #718096;
+          font-size: 1.1rem;
+          max-width: 600px;
+          margin: 0 auto;
         }
 
         .services-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
           gap: 30px;
-          margin-top: 40px;
         }
 
         .service-card {
           background: white;
           border-radius: 12px;
           overflow: hidden;
-          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+          box-shadow: 0 4px 6px rgba(0,0,0,0.05);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border: 1px solid #EDF2F7;
         }
 
         .service-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+          box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+          border-color: #C6F6D5;
         }
 
         .card-image {
@@ -420,11 +379,11 @@ const ServicesPage = () => {
           font-size: 1.5rem;
           font-weight: 600;
           margin-bottom: 15px;
-          color: #1F2937;
+          color: #2D3748;
         }
 
         .card-content p {
-          color: #6B7280;
+          color: #718096;
           line-height: 1.6;
           margin-bottom: 20px;
         }
@@ -433,7 +392,7 @@ const ServicesPage = () => {
           font-size: 1.1rem;
           font-weight: 600;
           margin-bottom: 15px;
-          color: #1F2937;
+          color: #2D3748;
         }
 
         .features ul {
@@ -447,6 +406,7 @@ const ServicesPage = () => {
           align-items: flex-start;
           gap: 10px;
           margin-bottom: 10px;
+          color: #4A5568;
         }
 
         .features li svg {
@@ -454,7 +414,7 @@ const ServicesPage = () => {
           height: 18px;
           flex-shrink: 0;
           margin-top: 3px;
-          stroke: #28A745;
+          stroke: #2F855A;
           stroke-width: 3;
         }
 
@@ -462,8 +422,8 @@ const ServicesPage = () => {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          padding: 12px 20px;
-          background: #28A745;
+          padding: 12px 24px;
+          background: #2F855A;
           color: white;
           border: none;
           border-radius: 8px;
@@ -473,8 +433,9 @@ const ServicesPage = () => {
         }
 
         .cta-button:hover {
-          background: #218838;
+          background: #276749;
           transform: translateY(-2px);
+          box-shadow: 0 4px 6px rgba(47, 133, 90, 0.2);
         }
 
         .cta-button svg {
@@ -495,29 +456,6 @@ const ServicesPage = () => {
           background: white;
         }
 
-        .section-header {
-          text-align: center;
-          max-width: 700px;
-          margin: 0 auto 50px auto;
-        }
-
-        .subtitle {
-          display: inline-block;
-          color: #28A745;
-          font-weight: 600;
-          letter-spacing: 1px;
-          margin-bottom: 15px;
-          text-transform: uppercase;
-          font-size: 14px;
-        }
-
-        h2 {
-          font-size: 2.25rem;
-          font-weight: 700;
-          line-height: 1.2;
-          margin-bottom: 20px;
-        }
-
         .stats-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -527,131 +465,55 @@ const ServicesPage = () => {
         }
 
         .stat-card {
-          background: #F9FAFB;
+          background: #F8F9FA;
           border-radius: 12px;
           padding: 30px;
           text-align: center;
           transition: all 0.3s ease;
+          border: 1px solid #E2E8F0;
         }
 
         .stat-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+          border-color: #C6F6D5;
+          background: white;
         }
 
         .stat-value {
           font-size: 3rem;
           font-weight: 700;
-          color: #28A745;
+          color: #2F855A;
           margin-bottom: 10px;
           line-height: 1;
         }
 
         .stat-label {
           font-size: 1.1rem;
-          color: #6B7280;
+          color: #718096;
           font-weight: 500;
-        }
-
-        /* CTA Section */
-        .cta-section {
-          padding: 80px 0;
-          background: linear-gradient(135deg, #28A745 0%, #5CB85C 100%);
-          color: white;
-        }
-
-        .cta-content {
-          max-width: 700px;
-          margin: 0 auto;
-          text-align: center;
-        }
-
-        .cta-content h2 {
-          margin-bottom: 20px;
-        }
-
-        .cta-content p {
-          font-size: 1.1rem;
-          opacity: 0.9;
-          margin-bottom: 30px;
-        }
-
-        .cta-buttons {
-          display: flex;
-          gap: 15px;
-          justify-content: center;
-        }
-
-        .primary-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 15px 30px;
-          background: white;
-          color: #28A745;
-          border: none;
-          border-radius: 8px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
-
-        .primary-btn:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2);
-        }
-
-        .primary-btn svg {
-          width: 18px;
-          height: 18px;
-          stroke: #28A745;
-          stroke-width: 2;
-          transition: transform 0.3s ease;
-        }
-
-        .primary-btn:hover svg {
-          transform: translateX(3px);
-        }
-
-        .secondary-btn {
-          padding: 15px 30px;
-          background: transparent;
-          color: white;
-          border: 2px solid rgba(255,255,255,0.3);
-          border-radius: 8px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
-
-        .secondary-btn:hover {
-          background: rgba(255,255,255,0.1);
-          border-color: white;
+          margin-top: 50px;
         }
 
         /* Responsive Styles */
         @media (max-width: 1024px) {
-          h1 {
-            font-size: 3rem;
+          .services-grid {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          }
+        }
+
+        @media (max-width: 768px) {
+          .section-header h2 {
+            font-size: 2rem;
           }
           
           .tab-buttons {
             flex-wrap: wrap;
           }
-        }
-
-        @media (max-width: 768px) {
-          .hero {
-            height: auto;
-            padding: 100px 0;
-          }
           
-          h1 {
-            font-size: 2.5rem;
-          }
-          
-          .lead {
-            font-size: 1.1rem;
+          .tab-btn {
+            padding: 10px 15px;
+            font-size: 14px;
           }
           
           .services-grid {
@@ -661,24 +523,11 @@ const ServicesPage = () => {
           .stats-grid {
             grid-template-columns: 1fr 1fr;
           }
-          
-          .cta-buttons {
-            flex-direction: column;
-          }
         }
 
         @media (max-width: 480px) {
-          h1 {
-            font-size: 2rem;
-          }
-          
-          h2 {
+          .section-header h2 {
             font-size: 1.75rem;
-          }
-          
-          .tab-btn {
-            padding: 12px 15px;
-            font-size: 14px;
           }
           
           .stat-card {

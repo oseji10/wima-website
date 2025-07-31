@@ -47,8 +47,8 @@ const ROIPopup = () => {
           <div className="popup-header">
             <div className="icon-wrapper">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#28a745" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M12 8V12M12 16H12.01" stroke="#28a745" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#ffc107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12 8V12M12 16H12.01" stroke="#ffc107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
             <h3>Top Performing Equipment</h3>
@@ -58,9 +58,6 @@ const ROIPopup = () => {
           <div className="equipment-cards">
             {featuredEquipment.map((item, index) => (
               <div key={index} className="equipment-card">
-                {/* <div className="equipment-image">
-                  <img src={item.image} alt={item.name} />
-                </div> */}
                 <div className="equipment-details">
                   <h4>{item.name}</h4>
                   <p className="description">{item.description}</p>
@@ -91,7 +88,7 @@ const ROIPopup = () => {
                         className="trend-segment"
                         style={{
                           height: `${(value / 50) * 100}%`,
-                          backgroundColor: item.name === "Tractor" ? '#28a745' : '#5cb85c'
+                          backgroundColor: item.name === "Tractor" ? '#ffc107' : '#ffab00'
                         }}
                         title={`Day ${6-i}: ${value}% ROI`}
                       ></div>
@@ -118,7 +115,7 @@ const ROIPopup = () => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(0,0,0,0.5);
+          background: rgba(0,0,0,0.7);
           backdrop-filter: blur(5px);
           display: flex;
           align-items: center;
@@ -134,8 +131,9 @@ const ROIPopup = () => {
           width: 90%;
           max-width: 500px;
           padding: 2rem;
-          box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.2);
           animation: slideUp 0.4s ease;
+          border: 2px solid #ffc107;
         }
 
         .roi-popup-container.landscape {
@@ -156,7 +154,7 @@ const ROIPopup = () => {
         }
 
         .close-btn:hover {
-          color: #333;
+          color: #122f2a;
           transform: rotate(90deg);
         }
 
@@ -174,18 +172,20 @@ const ROIPopup = () => {
         .icon-wrapper {
           width: 60px;
           height: 60px;
-          background: rgba(40, 167, 69, 0.1);
+          background: rgba(255, 193, 7, 0.1);
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 0 auto 1rem;
+          border: 2px solid rgba(255, 193, 7, 0.3);
         }
 
         .popup-header h3 {
           font-size: 1.5rem;
-          color: #2c3e50;
+          color: #122f2a;
           margin-bottom: 0.5rem;
+          font-weight: 700;
         }
 
         .popup-header p {
@@ -203,32 +203,17 @@ const ROIPopup = () => {
           flex: 1;
           display: flex;
           gap: 1rem;
-          padding: 1rem;
+          padding: 1.5rem;
           border-radius: 12px;
           background: #f8f9fa;
           transition: all 0.3s ease;
+          border: 1px solid rgba(18, 47, 42, 0.1);
         }
 
         .equipment-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .equipment-image {
-          width: 80px;
-          height: 80px;
-          background: white;
-          border-radius: 12px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0.5rem;
-          box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        }
-
-        .equipment-image img {
-          max-width: 100%;
-          max-height: 100%;
+          border-color: rgba(255, 193, 7, 0.5);
         }
 
         .equipment-details {
@@ -239,8 +224,9 @@ const ROIPopup = () => {
 
         .equipment-details h4 {
           font-size: 1.2rem;
-          color: #2c3e50;
+          color: #122f2a;
           margin: 0 0 0.5rem 0;
+          font-weight: 600;
         }
 
         .equipment-details .description {
@@ -260,7 +246,7 @@ const ROIPopup = () => {
         .roi-value {
           font-size: 1.3rem;
           font-weight: 700;
-          color: #28a745;
+          color: #122f2a;
         }
 
         .trend {
@@ -305,19 +291,21 @@ const ROIPopup = () => {
           justify-content: center;
           gap: 0.8rem;
           width: 100%;
-          padding: 0.8rem;
-          background: linear-gradient(90deg, #28a745, #5cb85c);
+          padding: 1rem;
+          background: #122f2a;
           color: white;
           font-weight: 600;
           border-radius: 8px;
           text-decoration: none;
           transition: all 0.3s ease;
           margin-top: 1.5rem;
+          border: 2px solid #122f2a;
         }
 
         .invest-cta:hover {
           transform: translateY(-2px);
-          box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+          background: #1a473f;
+          box-shadow: 0 5px 15px rgba(18, 47, 42, 0.3);
         }
 
         .invest-cta svg {
@@ -360,6 +348,7 @@ const ROIPopup = () => {
             flex-direction: column;
             align-items: center;
             text-align: center;
+            padding: 1rem;
           }
           
           .roi-display {

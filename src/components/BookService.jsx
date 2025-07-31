@@ -10,8 +10,9 @@ const servicesData = [
     category: "Drying",
     provider: "AgriTech Solutions",
     location: "Kaduna Hub - Soba",
+    distance: "5 km", // Added distance field
     rating: 5,
-    price: 1000, // 1000 Naira per KG
+    price: 1000,
     unit: "KG",
     image: "/assets/images/services/drying1.jpg"
   },
@@ -21,8 +22,9 @@ const servicesData = [
     category: "Threshing",
     provider: "FarmPro Services",
     location: "Kano Hub - Kura",
+    distance: "12 km",
     rating: 4,
-    price: 1000, // 1000 Naira per KG
+    price: 1000,
     unit: "KG",
     image: "/assets/images/services/thresher1.jpg"
   },
@@ -32,8 +34,9 @@ const servicesData = [
     category: "Pumping",
     provider: "AquaFarm Co.",
     location: "Gombe Hub - Zambuk",
+    distance: "25 km",
     rating: 3,
-    price: 1000, // 1000 Naira per Acre
+    price: 1000,
     unit: "Acre",
     image: "/assets/images/services/irrigation1.jpg"
   },
@@ -43,8 +46,9 @@ const servicesData = [
     category: "Spraying",
     provider: "GreenSpray Ltd.",
     location: "Adamawa Hub - Old Demsa",
+    distance: "8 km",
     rating: 5,
-    price: 1000, // 1000 Naira per Hectare
+    price: 1000,
     unit: "Hectare",
     image: "/assets/images/services/spraying1.jpg"
   },
@@ -54,8 +58,9 @@ const servicesData = [
     category: "Drying",
     provider: "Harvest Helpers",
     location: "Kaduna Hub - Kachia",
+    distance: "18 km",
     rating: 4,
-    price: 1000, // 1000 Naira per KG
+    price: 1000,
     unit: "KG",
     image: "/assets/images/services/drying1.jpg"
   },
@@ -65,8 +70,9 @@ const servicesData = [
     category: "Threshing",
     provider: "GrainMasters",
     location: "Kano Hub - Bagwai",
+    distance: "30 km",
     rating: 5,
-    price: 1000, // 1000 Naira per KG
+    price: 1000,
     unit: "KG",
     image: "/assets/images/services/thresher1.jpg"
   },
@@ -76,8 +82,9 @@ const servicesData = [
     category: "Pumping",
     provider: "WaterWorks",
     location: "Gombe Hub - Malam Sidi",
+    distance: "15 km",
     rating: 4,
-    price: 1000, // 1000 Naira per Acre
+    price: 1000,
     unit: "Acre",
     image: "/assets/images/services/irrigation1.jpg"
   },
@@ -87,8 +94,9 @@ const servicesData = [
     category: "Spraying",
     provider: "CropCare",
     location: "Adamawa Hub - Numan",
+    distance: "22 km",
     rating: 3,
-    price: 1000, // 1000 Naira per Hectare
+    price: 1000,
     unit: "Hectare",
     image: "/assets/images/services/spraying1.jpg"
   },
@@ -98,8 +106,9 @@ const servicesData = [
     category: "Drying",
     provider: "AgriDry",
     location: "Kaduna Hub - Zaria",
+    distance: "10 km",
     rating: 5,
-    price: 1000, // 1000 Naira per KG
+    price: 1000,
     unit: "KG",
     image: "/assets/images/services/drying1.jpg"
   },
@@ -109,8 +118,9 @@ const servicesData = [
     category: "Threshing",
     provider: "FarmTech",
     location: "Kano Hub - Gwarzo",
+    distance: "28 km",
     rating: 4,
-    price: 1000, // 1000 Naira per KG
+    price: 1000,
     unit: "KG",
     image: "/assets/images/services/thresher1.jpg"
   },
@@ -120,8 +130,9 @@ const servicesData = [
     category: "Pumping",
     provider: "HydroFarm",
     location: "Gombe Hub - Gyalengu",
+    distance: "7 km",
     rating: 5,
-    price: 1000, // 1000 Naira per Acre
+    price: 1000,
     unit: "Acre",
     image: "assets/images/services/pumping3.png"
   },
@@ -131,8 +142,9 @@ const servicesData = [
     category: "Spraying",
     provider: "SafeSpray",
     location: "Adamawa Hub - Gyawana",
+    distance: "14 km",
     rating: 4,
-    price: 1000, // 1000 Naira per Hectare
+    price: 1000,
     unit: "Hectare",
     image: "assets/images/services/spraying3.png"
   }
@@ -193,25 +205,25 @@ const BookService = () => {
                 <div className='sidebar-list'>
                   <ul>
                     <li>
-                      <Link href='/services'>
+                      <Link href='#'>
                         <i className='fa-solid fa-angle-right' />
                         Drying
                       </Link>
                     </li>
                     <li>
-                      <Link href='/services'>
+                      <Link href='#'>
                         <i className='fa-solid fa-angle-right' />
                         Threshing
                       </Link>
                     </li>
                     <li>
-                      <Link href='/services'>
+                      <Link href='#'>
                         <i className='fa-solid fa-angle-right' />
                         Pumping
                       </Link>
                     </li>
                     <li>
-                      <Link href='/services'>
+                      <Link href='#'>
                         <i className='fa-solid fa-angle-right' />
                         Spraying
                       </Link>
@@ -235,13 +247,14 @@ const BookService = () => {
                       type='range'
                       name='price__range'
                       id='priceRange'
-                      max={250}
-                      min={100}
-                      defaultValue={175}
+                      max={5000}
+                      min={500}
+                      defaultValue={1000}
+                      step={500}
                     />
                   </div>
                   <div className='filter-cta'>
-                    <p>₦100 - ₦250</p>
+                    <p>₦500 - ₦5000</p>
                     <button
                       className='btn--primary'
                       aria-label='filter'
@@ -259,33 +272,70 @@ const BookService = () => {
                 data-aos-delay={100}
               >
                 <div className='intro'>
-                  <h5>Select By Size</h5>
+                  <h5>Filter By Distance</h5>
                 </div>
                 <div className='size-wrapper'>
                   <div className='radio-single'>
                     <input
                       type='radio'
-                      id='sizeOne'
-                      name='donation-payment'
+                      id='distanceOne'
+                      name='distance-filter'
                       defaultChecked=''
                     />
-                    <label htmlFor='sizeOne'>Small Scale (8)</label>
+                    <label htmlFor='distanceOne'>Nearby (0-10 km)</label>
                   </div>
                   <div className='radio-single'>
-                    <input type='radio' id='sizeTwo' name='donation-payment' />
-                    <label htmlFor='sizeTwo'>Medium Scale (10)</label>
+                    <input type='radio' id='distanceTwo' name='distance-filter' />
+                    <label htmlFor='distanceTwo'>Medium (11-20 km)</label>
                   </div>
                   <div className='radio-single'>
                     <input
                       type='radio'
-                      id='sizeThree'
-                      name='donation-payment'
+                      id='distanceThree'
+                      name='distance-filter'
                     />
-                    <label htmlFor='sizeThree'>Large Scale (7)</label>
+                    <label htmlFor='distanceThree'>Far (21-30 km)</label>
                   </div>
                   <div className='radio-single'>
-                    <input type='radio' id='sizeFour' name='donation-payment' />
-                    <label htmlFor='sizeFour'>Industrial Scale (5)</label>
+                    <input type='radio' id='distanceFour' name='distance-filter' />
+                    <label htmlFor='distanceFour'>Very Far (30+ km)</label>
+                  </div>
+                </div>
+              </div>
+              <div
+                className='shop-sidebar-widget'
+                data-aos='fade-up'
+                data-aos-duration={1000}
+                data-aos-delay={100}
+              >
+                <div className='intro'>
+                  <h5>Filter By Capacity</h5>
+                </div>
+                <div className='size-wrapper'>
+                  <div className='radio-single'>
+                    <input
+                      type='radio'
+                      id='capacityOne'
+                      name='capacity-filter'
+                      defaultChecked=''
+                    />
+                    <label htmlFor='capacityOne'>Small (1-5 acres)</label>
+                  </div>
+                  <div className='radio-single'>
+                    <input type='radio' id='capacityTwo' name='capacity-filter' />
+                    <label htmlFor='capacityTwo'>Medium (6-20 acres)</label>
+                  </div>
+                  <div className='radio-single'>
+                    <input
+                      type='radio'
+                      id='capacityThree'
+                      name='capacity-filter'
+                    />
+                    <label htmlFor='capacityThree'>Large (21-50 acres)</label>
+                  </div>
+                  <div className='radio-single'>
+                    <input type='radio' id='capacityFour' name='capacity-filter' />
+                    <label htmlFor='capacityFour'>Commercial (50+ acres)</label>
                   </div>
                 </div>
               </div>
@@ -311,8 +361,8 @@ const BookService = () => {
                         <i className='icon-star checked' />
                         <i className='icon-star checked' />
                         <i className='icon-star checked' />
-                        <i className='icon-star ' />
-                        <i className='icon-star ' />
+                        <i className='icon-star checked' />
+                        <i className='icon-star checked' />
                       </span>
                       (5 Star)
                     </label>
@@ -327,8 +377,8 @@ const BookService = () => {
                       <span className='review'>
                         <i className='icon-star checked' />
                         <i className='icon-star checked' />
-                        <i className='icon-star ' />
-                        <i className='icon-star ' />
+                        <i className='icon-star checked' />
+                        <i className='icon-star checked' />
                         <i className='icon-star' />
                       </span>
                       (4 Star)
@@ -351,40 +401,6 @@ const BookService = () => {
                       (3 Star)
                     </label>
                   </div>
-                  <div className='radio-single'>
-                    <input
-                      type='radio'
-                      id='reviewFour'
-                      name='donation-payment'
-                    />
-                    <label htmlFor='reviewFour'>
-                      <span limit='2'>
-                        <i className='icon-star checked' />
-                        <i className='icon-star checked' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </span>
-                      (2 Star)
-                    </label>
-                  </div>
-                  <div className='radio-single'>
-                    <input
-                      type='radio'
-                      id='reviewFive'
-                      name='donation-payment'
-                    />
-                    <label htmlFor='reviewFive'>
-                      <span className='review'>
-                        <i className='icon-star checked' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                        <i className='icon-star' />
-                      </span>
-                      (1 Star)
-                    </label>
-                  </div>
                 </div>
               </div>
               <div
@@ -393,16 +409,18 @@ const BookService = () => {
                 data-aos-duration={1000}
                 data-aos-delay={100}
               >
-                <div class='intro'>
+                <div className='intro'>
                   <h5>Popular Tags</h5>
                 </div>
                 <div className='tag-wrapper'>
-                  <Link href='/services'>Drying</Link>
-                  <Link href='/services'>Threshing</Link>
-                  <Link href='/services'>Pumping</Link>
-                  <Link href='/services'>Spraying</Link>
-                  <Link href='/services'>Agricultural</Link>
-                  <Link href='/services'>Farming</Link>
+                  <Link href='#'>Drying</Link>
+                  <Link href='#'>Threshing</Link>
+                  <Link href='#'>Pumping</Link>
+                  <Link href='#'>Spraying</Link>
+                  <Link href='#'>Farm Equipment</Link>
+                  <Link href='#'>Harvest</Link>
+                  <Link href='#'>Irrigation</Link>
+                  <Link href='#'>Crop Care</Link>
                 </div>
               </div>
             </div>
@@ -429,8 +447,10 @@ const BookService = () => {
                       defaultValue={"high"}
                       className='price-select select'
                     >
-                      <option value='high'>High</option>
-                      <option value='low'>Low</option>
+                      <option value='high'>Price: High to Low</option>
+                      <option value='low'>Price: Low to High</option>
+                      <option value='distance'>Distance: Near to Far</option>
+                      <option value='rating'>Rating: High to Low</option>
                     </select>
                   </div>
                 </div>
@@ -445,26 +465,28 @@ const BookService = () => {
                       data-aos-delay={index % 3 * 100}
                     >
                       <div className='shop__single-thumb'>
-                        <Link href={`/service-details/${service.id}`}>
+                        <Link href={`#/${service.id}`}>
                           <img
                             src={service.image}
                             alt={`${service.name}_image`}
                           />
                         </Link>
                         <div className='shop-thumb'>
-                          <Link href={`/service-details/${service.id}`}>
+                          <Link href={`#/${service.id}`}>
                             <i className='fa-regular fa-eye' />
                           </Link>
-                          <Link href='/cart'>
+                          <Link href='#'>
                             <i className='icon-heart' />
                           </Link>
                           <Link href='/checkout'>
-                                                  <i className='fa-solid fa-arrow-right-arrow-left' />
-
+                            <i className='fa-solid fa-arrow-right-arrow-left' />
                           </Link>
                         </div>
+                        <div className="distance-tag">
+                          {service.distance} away
+                        </div>
                         <Link
-                          href={`/service-details/${service.id}`}
+                          href={`#/${service.id}`}
                           className='btn--primary'
                           aria-label='book service'
                           title='book service'
@@ -477,7 +499,7 @@ const BookService = () => {
                           {renderStars(service.rating)}
                         </div>
                         <p>
-                          <Link href={`/service-details/${service.id}`}>
+                          <Link href={`#/${service.id}`}>
                             {service.name}
                           </Link>
                         </p>
@@ -502,15 +524,15 @@ const BookService = () => {
                         </button>
                       </li>
                       <li>
-                        <Link href='/services'>1</Link>
+                        <Link href='#'>1</Link>
                       </li>
                       <li>
-                        <Link href='/services' className='active'>
+                        <Link href='#' className='active'>
                           2
                         </Link>
                       </li>
                       <li>
-                        <Link href='/services'>3</Link>
+                        <Link href='#'>3</Link>
                       </li>
                       <li>
                         <button>

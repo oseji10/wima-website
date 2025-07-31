@@ -131,13 +131,13 @@ const FooterOne = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='/faq'>
+                      <Link href='/faqs'>
                         <i className='fa-solid fa-arrow-right' />
                         FAQ
                       </Link>
                     </li>
                     <li>
-                      <Link href='#'>
+                      <Link href='/book-a-service'>
                         <i className='fa-solid fa-arrow-right' />
                         Book A Service
                       </Link>

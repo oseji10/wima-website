@@ -383,19 +383,19 @@ const HeaderOne = () => {
                           <ul className='navbar__sub-menu'>
                             <li
                               className={
-                                ["/faq"].includes(pathname) ? "active" : ""
+                                ["#"].includes(pathname) ? "active" : ""
                               }
                             >
                               <Link href='/photo-gallery'>Photo Gallery</Link>
                             </li>
                             <li
                               className={
-                                ["/donate-us"].includes(pathname)
+                                ["#"].includes(pathname)
                                   ? "active"
                                   : ""
                               }
                             >
-                              <Link href='/donate-us'>Videos</Link>
+                              <Link href='#'>Videos</Link>
                             </li>
                             {/* <li
                               className={

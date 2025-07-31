@@ -44,10 +44,10 @@ const TopBarOne = () => {
                 </div>
                 <div className="col-12 col-xxl-4 d-none d-xxl-block">
                   <div className="topbar__extra text-center">
-                    <p>
+                    {/* <p>
                       <i className="icon-heart-hand"></i> Are you ready to help
                       them? Let's become a volunteer!
-                    </p>
+                    </p> */}
                   </div>
                 </div>
                 <div className="col-12 col-lg-6 col-xxl-4">
@@ -90,11 +90,11 @@ const TopBarOne = () => {
                         href="https://mamatrak.wimanigeria.com"
                         style={{ color: "#fff" }}
                       > &nbsp; 
-                        MamaTrak &nbsp;
+                        MamaTrak<sup>TM</sup> &nbsp;
                       </Link> 
                       | &nbsp;
                       <Link
-                        href="https://mamatrak.wimanigeria.com"
+                        href="https://dashboard.wimanigeria.com"
                         style={{ color: "#fff" }}
                       >
                         Dashboards
