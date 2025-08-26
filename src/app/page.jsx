@@ -39,7 +39,7 @@ const page = () => {
         {/* CustomCursor  */}
         {/* <CustomCursor /> */}
 
-<ROIPopup/>
+{/* <ROIPopup/> */}
         {/* TopBarOne */}
         <TopBarOne />
 

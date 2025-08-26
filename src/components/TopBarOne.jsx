@@ -94,7 +94,7 @@ const TopBarOne = () => {
                       </Link> 
                       | &nbsp;
                       <Link
-                        href="https://dashboard.wimanigeria.com"
+                        href="https://dashboard.wimanigeria.com/cdel"
                         style={{ color: "#fff" }}
                       >
                         Dashboards
