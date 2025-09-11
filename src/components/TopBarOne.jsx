@@ -34,9 +34,9 @@ const TopBarOne = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="tel:+2348064237096">
+                        <a href="tel:+2349048750029">
                           <i className="fa-solid fa-phone"></i>
-                          +234-806-4237-096
+                          +234-904-8750-029
                         </a>
                       </li>
                     </ul>
@@ -98,6 +98,13 @@ const TopBarOne = () => {
                         style={{ color: "#fff" }}
                       >
                         Dashboards
+                      </Link> &nbsp;
+                      | &nbsp;
+                      <Link
+                        href="/become-a-member"
+                        style={{ color: "#fff" }}
+                      >
+                        Join
                       </Link>
                     </div>
                     <div className="social">
