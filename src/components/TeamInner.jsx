@@ -29,7 +29,7 @@ const TeamInner = () => {
               <div className='team__single van-tilt'>
                 <div className='team__single-thumb'>
                   <Link href='/team-details'>
-                    <img src='/assets/images/team/hadiza.png' alt='Image_inner' />
+                    <img src='/assets/images/team/Hadiza_Umar_Abubakar.jpg' alt='Image_inner' />
                   </Link>
                   <div className='team__icons'>
                     <div className='team__single-content__icon'>
@@ -131,7 +131,7 @@ const TeamInner = () => {
               <div className='team__single van-tilt'>
                 <div className='team__single-thumb'>
                   <Link href='/team-details'>
-                    <img src='/assets/images/team/gbenga.jpg' alt='Image_inner' />
+                    <img src='/assets/images/team/Bilkisu_Sani_Yero.jpg' alt='Image_inner' />
                   </Link>
                   <div className='team__icons'>
                     <div className='team__single-content__icon'>
@@ -165,7 +165,7 @@ const TeamInner = () => {
                 </div>
                 <div className='team__single-content'>
                   <h6>
-                    <Link href='/team-details'>Oloruntoba Oluwagbenga</Link>
+                    <Link href='/team-details'>Bilkisu Sani Yero</Link>
                   </h6>
                   <p>Project Manager (M&E)</p>
                 </div>
@@ -283,7 +283,7 @@ const TeamInner = () => {
               <div className='team__single van-tilt'>
                 <div className='team__single-thumb'>
                   <Link href='/team-details'>
-                    <img src='/assets/images/team/sekinat.jpg' alt='Image_inner' />
+                    <img src='/assets/images/team/Takwi_Leonard.jpg' alt='Image_inner' />
                   </Link>
                   <div className='team__icons'>
                     <div className='team__single-content__icon'>
@@ -317,9 +317,9 @@ const TeamInner = () => {
                 </div>
                 <div className='team__single-content'>
                   <h6>
-                    <Link href='/team-details'>Sekinat Ogungboye</Link>
+                    <Link href='/team-details'>Takwi Leonard</Link>
                   </h6>
-                  <p>Resultd Office</p>
+                  <p>Human Resource Officer</p>
                 </div>
               </div>
             </div>

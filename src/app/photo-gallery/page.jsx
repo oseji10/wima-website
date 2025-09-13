@@ -20,7 +20,7 @@ import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 
 export const metadata = {
-  title: "Projects | Women in Mechanized Agriculture",
+  title: "Photo Gallery | Women in Mechanized Agriculture",
   description: "Empowering women one community at a time",
 };
 const images = [
